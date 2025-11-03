@@ -34,3 +34,6 @@ This guide explains how to build a standalone Windows executable for WAVsToALE u
 - The app is self-contained; no Python installation is needed on the target machine.
 
 For questions or updates, contact: jason@editcandy.com
+
+## Build Status
+This project uses automated builds via GitHub Actions for Windows executable creation.
