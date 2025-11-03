@@ -1,4 +1,4 @@
-('/Users/jasonbrodkey/Documents/SFX/pythonScripts/build/WAVsToALE/PYZ-00.pyz',
+('/Users/jasonbrodkey/Documents/SFX/pythonScripts/WAVsToALE/build/WAVsToALE/PYZ-00.pyz',
  [('__future__',
    '/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/__future__.py',
    'PYMODULE'),
