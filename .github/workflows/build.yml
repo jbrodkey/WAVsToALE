@@ -61,7 +61,9 @@ jobs:
         copy WAVsToALE.exe WAVsToALE\
         copy "..\WAVsToALE README.rtf" WAVsToALE\ 2>nul || echo "README file not found, skipping..."
         powershell Compress-Archive -Path WAVsToALE -DestinationPath "WAVsToALE-Windows-v${{ steps.get_version.outputs.version }}.zip"
-        dir    - name: Upload package
+        dir
+        
+    - name: Upload package
       uses: actions/upload-artifact@v4
       with:
         name: WAVsToALE-Windows-v${{ steps.get_version.outputs.version }}
