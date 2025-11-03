@@ -40,32 +40,17 @@ jobs:
           echo "csv_found=false" >> $GITHUB_OUTPUT
         fi
         
-    - name: Build with PyInstaller (Windows)
-      run: |
-        echo "Starting Windows build..."
-        if ("${{ steps.find-csv.outputs.csv_found }}" -eq "true") {
-          echo "Building with UCS CSV: ${{ steps.find-csv.outputs.csv_file }}"
-          pyinstaller --onefile --windowed --name WAVsToALE `
-            --hidden-import tkinter --hidden-import tkinter.ttk --hidden-import tkinter.filedialog --hidden-import tkinter.messagebox --hidden-import tkinter.scrolledtext `
-            --add-data "${{ steps.find-csv.outputs.csv_file }};." `
-            wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
-        } else {
-          echo "Building without UCS CSV"
-          pyinstaller --onefile --windowed --name WAVsToALE `
-            --hidden-import tkinter --hidden-import tkinter.ttk --hidden-import tkinter.filedialog --hidden-import tkinter.messagebox --hidden-import tkinter.scrolledtext `
-            wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
-        }
-        echo "Build completed. Checking output..."
-        dir dist
-        if (Test-Path "dist\WAVsToALE.exe") {
-          $fileSize = (Get-Item "dist\WAVsToALE.exe").Length
-          echo "WAVsToALE.exe created successfully. Size: $fileSize bytes"
-        } else {
-          echo "ERROR: WAVsToALE.exe not found!"
-          exit 1
-        }
-        
-    - name: Rename executable
+      - name: Build Windows executable
+        run: |
+          pyinstaller --onefile --windowed \
+            --hidden-import=tkinter \
+            --hidden-import=tkinter.ttk \
+            --hidden-import=tkinter.filedialog \
+            --hidden-import=tkinter.messagebox \
+            --hidden-import=tkinter.font \
+            --hidden-import=tkinter.scrolledtext \
+            --add-data="UCS_v8.2.1_Full_List.csv;." \
+            wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py    - name: Rename executable
       shell: bash
       run: |
         cd dist
@@ -89,6 +74,8 @@ jobs:
     - name: Create Release
       if: startsWith(github.ref, 'refs/tags/')
       uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         files: dist/WAVsToALE-Windows.exe
         draft: false
