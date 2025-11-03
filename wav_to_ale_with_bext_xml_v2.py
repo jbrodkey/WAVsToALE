@@ -145,15 +145,21 @@ def sanitize_path(path_str):
         return path_str
     # Remove surrounding whitespace then any enclosing quotes
     s = path_str.strip()
-    # Strip matching surrounding quotes (single or double)
+    try:
+        import shlex
+        parts = shlex.split(s)
+        if parts:
+            s = parts[0]
+    except Exception:
+        s = s.replace('\\ ', ' ')
+
     if (s.startswith("'") and s.endswith("'")) or (s.startswith('"') and s.endswith('"')):
         s = s[1:-1]
-    # Expand user and vars and make absolute
+
     s = os.path.expanduser(os.path.expandvars(s))
     try:
         s = os.path.abspath(s)
     except Exception:
-        # Fallback: return as-is after expansions
         pass
     return s
 
@@ -178,7 +184,7 @@ def create_ale_file(metadata_list, output_file_path):
     for metadata in metadata_list:
         for column in all_columns:
             if column not in metadata:
-                metadata[column] = "N/A"  # Default value for missing columns
+                metadata[column] = ""  # Default value for missing columns
 
     # Open the output ALE file
     with open(output_file_path, 'w') as ale_file:
@@ -196,8 +202,10 @@ def create_ale_file(metadata_list, output_file_path):
         
         # Write metadata rows
         for metadata in metadata_list:
-            row = [str(metadata.get(column, "N/A")) for column in all_columns]
-            ale_file.write("\t".join(row) + "\n")
+            values = [str(metadata.get(column, "")).strip() for column in all_columns]
+            if not any(values):
+                continue
+            ale_file.write("\t".join(values) + "\n")
     print(f"ALE file created at: {output_file_path}")
 
 def main():

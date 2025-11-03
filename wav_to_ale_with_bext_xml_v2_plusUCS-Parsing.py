@@ -1,3 +1,32 @@
+"""
+This script creates Avid Log Exchange (ALE) files by parsing metadata from SFX WAV files.
+It extracts metadata from:
+- Standard WAV properties
+- Broadcast audio metadata (BEXT)
+- Embedded XML
+- File naming conventions (UCS categories)
+
+The resulting ALE file can be imported into Avid Media Composer to help catalog 
+and organize audio files based on their metadata.
+
+This has been tested on macOS. Your mileage may vary on other operating systems.
+
+Author: Jason Brodkey
+Contact: jason@editcandy.com
+Copyright (c) 2025 Jason Brodkey. 
+Licensed under CC BY-NC-SA 4.0. 
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+You are free to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+Under the following terms:
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+- NonCommercial — You may not use the material for commercial purposes.
+- ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+
+"""
+
 import os
 import csv
 import wave
@@ -8,6 +37,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 # Global UCS mapping dictionary
 UCS_MAPPING = {}
+# Collect skipped files/errors for later logging (silently skip during run)
+SKIP_LOG = []
 
 def load_ucs_mapping(csv_file_path):
     """Load UCS mapping from a CSV file."""
@@ -95,12 +126,26 @@ def parse_wav_metadata(wav_file_path):
         metadata['Category'] = category
         metadata['Subcategory'] = subcategory
 
-    except EOFError:
-        print(f"EOFError: Unexpected end of file for {wav_file_path}")
+    except EOFError as e:
+        # Record and skip files with EOF or other read errors
+        try:
+            SKIP_LOG.append(f"{wav_file_path}\tEOFError: {e}")
+        except Exception:
+            pass
+        return None
     except wave.Error as e:
-        print(f"WaveError: {e} for {wav_file_path}")
+        # Record unsupported/unknown WAV formats and skip them silently
+        try:
+            SKIP_LOG.append(f"{wav_file_path}\tWaveError: {e}")
+        except Exception:
+            pass
+        return None
     except Exception as e:
-        print(f"Error parsing WAV file {wav_file_path}: {e}")
+        try:
+            SKIP_LOG.append(f"{wav_file_path}\tError: {e}")
+        except Exception:
+            pass
+        return None
 
     return metadata
 
@@ -205,8 +250,23 @@ def sanitize_path(path_str):
     if path_str is None:
         return path_str
     s = path_str.strip()
+    # Try to interpret shell-style escaping/quoting (so users can paste paths like: /path/with\ spaces)
+    try:
+        import shlex
+        parts = shlex.split(s)
+        if parts:
+            s = parts[0]
+    except Exception:
+        # Fallback: unescape common escaped characters (spaces, commas, parentheses, ampersand, etc.)
+        # e.g. user pastes: /path/with\ spaces or /Folder/Carpet\ Footsteps\,\ Trainers
+        unescapes = {'\\ ': ' ', '\\,': ',', '\\(': '(', '\\)': ')', '\\&': '&', "\\'": "'", '\\"': '"', '\\#': '#'}
+        for esc, char in unescapes.items():
+            s = s.replace(esc, char)
+
+    # Remove surrounding matching quotes as a last resort
     if (s.startswith("'") and s.endswith("'")) or (s.startswith('"') and s.endswith('"')):
         s = s[1:-1]
+
     s = os.path.expanduser(os.path.expandvars(s))
     try:
         s = os.path.abspath(s)
@@ -239,7 +299,7 @@ def create_ale_file(metadata_list, output_file_path):
     for metadata in metadata_list:
         for column in all_columns:
             if column not in metadata:
-                metadata[column] = "N/A"
+                metadata[column] = ""
 
     # Write ALE with a conventional Heading/Column/Data structure
     try:
@@ -255,9 +315,13 @@ def create_ale_file(metadata_list, output_file_path):
             ale_file.write("\n")
             ale_file.write("Data\n")
 
+            # Filter out any metadata entries that are empty (all columns blank/whitespace)
             for metadata in metadata_list:
-                row = [str(metadata.get(column, "N/A")) for column in all_columns]
-                ale_file.write("\t".join(row) + "\n")
+                values = [str(metadata.get(column, "")).strip() for column in all_columns]
+                if not any(values):
+                    # skip entirely blank rows
+                    continue
+                ale_file.write("\t".join(values) + "\n")
 
         print(f"Successfully created ALE file: {output_file_path}")
 
@@ -315,8 +379,12 @@ def main():
         return
     # If user didn't provide an output path, default to <parent_of_wav_dir>/ALEs/<wav_dir_basename>.ale
     wav_basename = os.path.basename(os.path.normpath(wav_directory))
-    parent_dir = os.path.dirname(os.path.normpath(wav_directory))
-    ales_dir = os.path.join(parent_dir, 'ALEs')
+    # Default ALEs folder is one level above the script directory
+    try:
+        script_parent = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    except Exception:
+        script_parent = os.path.dirname(os.path.realpath(os.getcwd()))
+    ales_dir = os.path.join(script_parent, 'ALEs')
     # Ensure the ALEs directory exists
     try:
         os.makedirs(ales_dir, exist_ok=True)
@@ -343,23 +411,101 @@ def main():
         print(f"Error: Directory '{wav_directory}' does not exist.")
         return
 
-    wav_file_paths = [
-        os.path.join(wav_directory, file_name)
-        for file_name in os.listdir(wav_directory)
-        if file_name.lower().endswith('.wav')
-    ]
+    # Inspect the provided WAV directory for subdirectories containing WAV files.
+    # Behavior:
+    # - If there are subdirectories with WAV files and the user did NOT explicitly
+    #   request a single output file, create one ALE per subdirectory (named after
+    #   the subdirectory) and place them in the same directory as the computed
+    #   output file. Also create a root-level ALE for WAVs directly under the
+    #   provided directory if present.
+    # - If the user explicitly provided a single output file path, preserve the
+    #   original behavior and write a single ALE containing all WAVs found only
+    #   at the top-level of the provided directory.
 
-    if not wav_file_paths:
-        print(f"Error: No WAV files found in the directory '{wav_directory}'.")
-        return
+    # Recursively walk the WAV directory and group WAV files by directory.
+    # We'll create one ALE per directory that contains WAV files.
+    dir_wav_map = {}
+    for dirpath, dirnames, filenames in os.walk(wav_directory):
+        wavs = [os.path.join(dirpath, f) for f in filenames if f.lower().endswith('.wav')]
+        if wavs:
+            dir_wav_map[dirpath] = wavs
 
-    # Process WAV files and extract metadata
-    metadata_list = []
-    with ThreadPoolExecutor() as executor:
-        metadata_list = list(executor.map(parse_wav_metadata, wav_file_paths))
+    # Determine the directory to place per-subdir ALEs (use the parent dir of the output file)
+    parent_output_dir = os.path.dirname(output_ale_file) if output_ale_file else ales_dir
+    try:
+        os.makedirs(parent_output_dir, exist_ok=True)
+    except Exception:
+        pass
 
-    # Create ALE file
-    create_ale_file(metadata_list, output_ale_file)
+    # Create a subfolder named after the provided WAV directory to hold all generated ALEs
+    ales_output_root = os.path.join(parent_output_dir, wav_basename)
+    try:
+        os.makedirs(ales_output_root, exist_ok=True)
+    except Exception:
+        pass
+
+    # Was the user asking for a single explicit output file? If they provided a non-directory
+    # output path, treat it as an explicit single-file request and keep the old behavior.
+    user_requested_single_file = bool(raw_out and raw_out.strip() and not os.path.isdir(raw_out))
+
+    if user_requested_single_file:
+        # Single-file behavior: collect only top-level WAVs (not recursive)
+        top_level_wavs = [p for p in dir_wav_map.get(wav_directory, [])]
+        if not top_level_wavs:
+            print(f"Error: No WAV files found in the directory '{wav_directory}'.")
+            return
+
+        start_len = len(SKIP_LOG)
+        with ThreadPoolExecutor() as executor:
+            metadata_list = list(executor.map(parse_wav_metadata, top_level_wavs))
+        metadata_list = [m for m in metadata_list if m]
+
+        create_ale_file(metadata_list, output_ale_file)
+        if len(SKIP_LOG) > start_len:
+            try:
+                skip_log_path = output_ale_file + '.skip.log'
+                with open(skip_log_path, 'w', encoding='utf-8') as f:
+                    for line in SKIP_LOG[start_len:]:
+                        f.write(line + '\n')
+            except Exception:
+                pass
+
+    else:
+        # Recursive behavior: create an ALE for every directory that contains WAVs
+        if not dir_wav_map:
+            print(f"Error: No WAV files found in the directory '{wav_directory}'.")
+            return
+
+        for dirpath, wavs in sorted(dir_wav_map.items()):
+            # Determine a mirrored output directory under ales_output_root
+            rel = os.path.relpath(dirpath, wav_directory)
+            if rel == '.':
+                target_dir = ales_output_root
+            else:
+                target_dir = os.path.join(ales_output_root, rel)
+            try:
+                os.makedirs(target_dir, exist_ok=True)
+            except Exception:
+                pass
+
+            out_file = os.path.join(target_dir, f"{os.path.basename(dirpath)}.ale")
+
+            start_len = len(SKIP_LOG)
+            with ThreadPoolExecutor() as executor:
+                metadata_list = list(executor.map(parse_wav_metadata, wavs))
+            metadata_list = [m for m in metadata_list if m]
+
+            if metadata_list:
+                create_ale_file(metadata_list, out_file)
+                # Write per-ALE skip log entries
+                if len(SKIP_LOG) > start_len:
+                    try:
+                        skip_log_path = out_file + '.skip.log'
+                        with open(skip_log_path, 'w', encoding='utf-8') as f:
+                            for line in SKIP_LOG[start_len:]:
+                                f.write(line + '\n')
+                    except Exception:
+                        pass
 
 if __name__ == "__main__":
     main()
