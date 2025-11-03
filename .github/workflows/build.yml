@@ -40,9 +40,9 @@ jobs:
           echo "csv_found=false" >> $GITHUB_OUTPUT
         fi
         
-      - name: Build Windows executable
-        run: |
-          pyinstaller --onefile --windowed \
+    - name: Build Windows executable
+      run: |
+        pyinstaller --onefile --windowed \
             --hidden-import=tkinter \
             --hidden-import=tkinter.ttk \
             --hidden-import=tkinter.filedialog \
