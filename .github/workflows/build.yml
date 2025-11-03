@@ -49,6 +49,7 @@ jobs:
       run: |
         cd dist
         dir
+        Remove-Item -Path "WAVsToALE" -Recurse -Force -ErrorAction SilentlyContinue
         mkdir WAVsToALE
         copy WAVsToALE.exe WAVsToALE\
         copy "..\WAVsToALE README.rtf" WAVsToALE\ 2>nul || echo "README file not found, skipping..."
