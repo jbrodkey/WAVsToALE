@@ -49,10 +49,10 @@ jobs:
       run: |
         cd dist
         dir
-        mkdir WAVsToALE-Windows
-        copy WAVsToALE.exe WAVsToALE-Windows\
-        copy "..\WAVsToALE README.rtf" WAVsToALE-Windows\ 2>nul || echo "README file not found, skipping..."
-        powershell Compress-Archive -Path WAVsToALE-Windows -DestinationPath WAVsToALE-Windows.zip
+        mkdir WAVsToALE
+        copy WAVsToALE.exe WAVsToALE\
+        copy "..\WAVsToALE README.rtf" WAVsToALE\ 2>nul || echo "README file not found, skipping..."
+        powershell Compress-Archive -Path WAVsToALE -DestinationPath WAVsToALE-Windows.zip
         dir
         
     - name: Upload package
