@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/ExportAS05Effects.dir/ExportAS05Effects.cpp.o -o ../../ExportAS05Effects-1.2.0  ../../../RefImpl/libaafiid.a ../../../RefImpl/libaaflib.a

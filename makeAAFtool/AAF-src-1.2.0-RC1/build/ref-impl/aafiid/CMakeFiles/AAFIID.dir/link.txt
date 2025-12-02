@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../RefImpl/libaafiid.a CMakeFiles/AAFIID.dir/aafiid.cpp.o
-/usr/bin/ranlib ../../RefImpl/libaafiid.a

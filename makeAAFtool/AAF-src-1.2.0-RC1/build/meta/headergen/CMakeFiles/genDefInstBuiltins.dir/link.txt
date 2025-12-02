@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/genDefInstBuiltins.dir/headergen_headerGenUtils_genDefInstBuiltins.cpp.o CMakeFiles/genDefInstBuiltins.dir/headergen_genDefInstBuiltins.cpp.o -o genDefInstBuiltins

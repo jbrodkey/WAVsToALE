@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/ImportVC3.dir/ImportVC3.cpp.o -o ../../ImportVC3-1.2.0  ../../../RefImpl/libaafiid.a ../../../RefImpl/libaaflib.a

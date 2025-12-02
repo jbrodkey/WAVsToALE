@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../RefImpl/libaaflib.a CMakeFiles/AAFLIB.dir/aaflib.cpp.o CMakeFiles/AAFLIB.dir/aaflibwin32.cpp.o CMakeFiles/AAFLIB.dir/aaflibsgi.cpp.o
-/usr/bin/ranlib ../../RefImpl/libaaflib.a

@@ -13,6 +13,9 @@ packaging/DMG_Contents_STAGING/
 *.toc
 base_library.zip
 
+# Compressed archives
+*.zip
+
 # Python cache
 __pycache__/
 *.pyc
@@ -26,3 +29,6 @@ venv/
 
 # macOS metadata
 .DS_Store
+
+# Office temp files
+~$*

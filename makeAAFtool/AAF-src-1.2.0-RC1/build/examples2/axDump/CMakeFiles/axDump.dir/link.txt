@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/axDump.dir/AxDump_main.cpp.o -o axDump-1.2.0  ../../RefImpl/libaafiid.a ../../RefImpl/libaaflib.a ../axLib/libaxLib.a

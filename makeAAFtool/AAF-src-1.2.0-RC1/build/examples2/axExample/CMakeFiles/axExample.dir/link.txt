@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/axExample.dir/axCompCreate.cpp.o CMakeFiles/axExample.dir/axEssenceCreate.cpp.o CMakeFiles/axExample.dir/axExample_main.cpp.o CMakeFiles/axExample.dir/axExample_axMetaCreate.cpp.o -o axExample-1.2.0  ../../RefImpl/libaafiid.a ../../RefImpl/libaaflib.a ../axLib/libaxLib.a
