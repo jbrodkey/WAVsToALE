@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "../../XMLStoredFormatTest"
+  "../../XMLStoredFormatTest-1.2.0"
+  "../../XMLStoredFormatTest.pdb"
+  "CMakeFiles/XMLStoredFormat.dir/TestCharacter.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestCharacter.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestEnum.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestEnum.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestExampleFiles.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestExampleFiles.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestExtEnum.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestExtEnum.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestFixedArray.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestFixedArray.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestIndirect.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestIndirect.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestInteger.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestInteger.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestOpaque.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestOpaque.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestRecord.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestRecord.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestRename.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestRename.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestSet.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestSet.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestStream.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestStream.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestString.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestString.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestVarArray.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestVarArray.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/TestWeakRef.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/TestWeakRef.cpp.o.d"
+  "CMakeFiles/XMLStoredFormat.dir/XMLStoredFormatTest.cpp.o"
+  "CMakeFiles/XMLStoredFormat.dir/XMLStoredFormatTest.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/XMLStoredFormat.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

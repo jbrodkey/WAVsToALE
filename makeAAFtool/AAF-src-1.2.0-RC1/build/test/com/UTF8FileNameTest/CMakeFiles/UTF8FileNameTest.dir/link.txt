@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/UTF8FileNameTest.dir/UTF8FileNameTest_utf8.cpp.o CMakeFiles/UTF8FileNameTest.dir/UTF8FileNameTest.cpp.o -o ../../UTF8FileNameTest-1.2.0  ../../../RefImpl/libaafiid.a ../../../RefImpl/libaaflib.a

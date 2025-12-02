@@ -458,7 +458,7 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
 
     # UCS CSV resolution: use provided, else try defaults in bundled base
     if not ucs_csv_file or not os.path.isfile(ucs_csv_file):
-        default_name = 'UCS_v8.2.1_Full_List.csv'
+        default_name = 'data/UCS_v8.2.1_Full_List.csv'
         default_ucs = resource_path(default_name)
         if os.path.isfile(default_ucs):
             ucs_csv_file = default_ucs
@@ -1063,7 +1063,7 @@ def main():
     except Exception:
         script_dir = os.getcwd()
     
-    default_name = 'UCS_v8.2.1_Full_List.csv'
+    default_name = 'data/UCS_v8.2.1_Full_List.csv'
     # Prefer bundled resource if present (PyInstaller) else script directory
     default_ucs = resource_path(default_name)
     ucs_csv_file = default_ucs if os.path.isfile(default_ucs) else None

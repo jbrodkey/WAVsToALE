@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/axWavToAaf-1.2.0.dir/axWavToAaf.cpp.o" -o axWavToAaf-1.2.0  -Wl,-rpath,/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/build/RefImpl ../../RefImpl/libaafiid.a ../../RefImpl/libaaflib.a ../axLib/libaxLib.a ../../RefImpl/libcom-api.dylib

@@ -1,0 +1,2335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		66E5FADC17BC348BB421F929 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E3A8F66EBBFF4C65B063BCFD /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				EAD05BB00B7395706A16C786 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		ADCF5B29167502F78C1C2ACE /* MakeSDKUtilities */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7C14FAA424A94EDBBBE964EE /* Build configuration list for PBXAggregateTarget "MakeSDKUtilities" */;
+			buildPhases = (
+			);
+			dependencies = (
+				F1B8DAFAF4834A589B99623D /* PBXTargetDependency */,
+				83FF6A8153A64941A6EB33C8 /* PBXTargetDependency */,
+				A9B9154F33514EB8981EAD6E /* PBXTargetDependency */,
+				4002FAA15F42477DA573E8AD /* PBXTargetDependency */,
+				2F7DBB148820416DB1523DA3 /* PBXTargetDependency */,
+				AEEBDF87DF26403DBD801CF2 /* PBXTargetDependency */,
+				C20400C0537D4F30BA95B957 /* PBXTargetDependency */,
+			);
+			name = MakeSDKUtilities;
+			productName = MakeSDKUtilities;
+		};
+		E3FD61174664A23BFF1DF788 /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 19C3295572824C8D94694385 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				003C8D08B0008F35F218E126 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+		F56AFFC068BFC9CE7B30930F /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0C0AE83EA478494F9A1D95CA /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				268D8CA7FB6D9AACC78611BF /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				64AB0115F878469BA136ABA1 /* PBXTargetDependency */,
+				65DCFD3E780C4C3DB179E732 /* PBXTargetDependency */,
+				3E67E095F9ED4A7EB8090873 /* PBXTargetDependency */,
+				8E6D2D05AA8E4F57B2EE9439 /* PBXTargetDependency */,
+				DAEB127DCED2496EB6062D97 /* PBXTargetDependency */,
+				CFBC39F8963941AEB2B76060 /* PBXTargetDependency */,
+				C0EECEAB53004B6488382C0C /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0802DE17D05D44B19A6FA662 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 2D35AA03638941AD8089B20D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/CMakeLists.txt */; };
+		08F1581047194412AB4258CD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/eli2aaf_utilities.cpp */ = {isa = PBXBuildFile; fileRef = CBBA172DCC3B4EABA49F5DA9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/eli2aaf_utilities.cpp */; };
+		10A23DAFD6464A3B8F5F1704 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Logging.cpp */ = {isa = PBXBuildFile; fileRef = 401F436215774C53A6C79BFB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Logging.cpp */; };
+		136EC8231EF04C258599C204 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.h */ = {isa = PBXBuildFile; fileRef = CDFE5D51DBB24FE3AD77BD98 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.h */; };
+		14E10DBFECC14978817F9673 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotFactory_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = 81CE0364806349EDBF97F734 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotFactory_aafmeta2dot.h */; };
+		15F3AEB691AE4B83A93D470F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotFactory.cpp */ = {isa = PBXBuildFile; fileRef = A76ACB0EFD124FC69408C302 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotFactory.cpp */; };
+		1A52C968A1BF4550B040529E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotRecordNode_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = D4C3BDEE2803445190702EB6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotRecordNode_aaf2dot.h */; };
+		1A83B18BE59949C8A7EE1F05 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotElement.cpp */ = {isa = PBXBuildFile; fileRef = 01F24C90AD354A3D86936FC9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotElement.cpp */; };
+		1BCC152C25B247C788C57E1B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.cpp */ = {isa = PBXBuildFile; fileRef = 2B1F91DC08644F8BBAE6A314 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.cpp */; };
+		1C94DF60F9304DB5998D96D1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.h */ = {isa = PBXBuildFile; fileRef = 6FDE0DC25700491BB595CB32 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.h */; };
+		232A169F7EF5456095F0E5BF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.h */ = {isa = PBXBuildFile; fileRef = 0EF39AD68E99499BA8AB88C4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.h */; };
+		25ADD265106E454993AA10F6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/Utilities_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = 092658A006DA4998B62225E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/Utilities_aaf2dot.h */; };
+		2B4DD415774343DCA5FB644D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotThingWithID.cpp */ = {isa = PBXBuildFile; fileRef = 9A911407DA5547FE9A13A1EB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotThingWithID.cpp */; };
+		3848CA8104E54AF6AF92C5A0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = DB85BD2BEC514A6AA88323B2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/CMakeLists.txt */; };
+		3AD7E078A80D4E1CA33F16F4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.cpp */ = {isa = PBXBuildFile; fileRef = 9BC8B8F6C29E4DBC9806A273 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.cpp */; };
+		3C392FF75CFB470A8711A4BF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotEdge_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = E722751B1EE94D4A8EA3B036 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotEdge_aafmeta2dot.h */; };
+		3D474FCA5F2D46C184DC9416 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotEdge.cpp */ = {isa = PBXBuildFile; fileRef = D8324E73E2994C18B5246D0C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotEdge.cpp */; };
+		41A4AE60C05943D5B701C190 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 02A27F25870E4856A4677701 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/CMakeLists.txt */; };
+		421B5F95E6BB420B8C339812 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.h */ = {isa = PBXBuildFile; fileRef = FBA2D9D897444A03A9C25EE1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.h */; };
+		45850233D0084D16B072FCC6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.h */ = {isa = PBXBuildFile; fileRef = B82AABBFF9344A30866B0D35 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.h */; };
+		4661AAAFBE7E461BB9EDC837 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.cpp */ = {isa = PBXBuildFile; fileRef = D3483C60D96641BBBAD7EA1E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.cpp */; };
+		4C552E75B92646F09EFF6725 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotSubGraph.cpp */ = {isa = PBXBuildFile; fileRef = 885FD5C7AF494FA495E6C220 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotSubGraph.cpp */; };
+		4D16F3509BCB4B6CA03E822D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.cpp */ = {isa = PBXBuildFile; fileRef = 452F6C8255E54A5D982FD073 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.cpp */; };
+		4E6C6565DFAB4020B8C1A7A0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/aafembed.cpp */ = {isa = PBXBuildFile; fileRef = 75B0CAE132484E89B79E4699 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/aafembed.cpp */; };
+		5336B5F3C92842789DBAE4FB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotThingWithID_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = 629FA791268B4F2081CF699F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotThingWithID_aafmeta2dot.h */; };
+		5528BAF40A6B4A47892606C7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotThingWithID.cpp */ = {isa = PBXBuildFile; fileRef = D03A1A64101E4EF7A5A3DADF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotThingWithID.cpp */; };
+		56989F9596AA465996E2025D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotSubGraph_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = 5B9A81D1B83C465E92C4DE90 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotSubGraph_aaf2dot.h */; };
+		5811A4139DB348EF884CE8DE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.cpp */ = {isa = PBXBuildFile; fileRef = C29B4548BBD34A169874835B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.cpp */; };
+		58D722C9255A48F38B792249 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.h */ = {isa = PBXBuildFile; fileRef = CE04E1ACC0904974B243AE54 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.h */; };
+		5A0530E2277142499DA8E249 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.cpp */ = {isa = PBXBuildFile; fileRef = D21D20EFC77D4B908B3EAC76 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.cpp */; };
+		5A81695AC1B14337B47DB7E6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.cpp */ = {isa = PBXBuildFile; fileRef = B187A21D434E4D38B44CC984 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.cpp */; };
+		5B87C4A7E38C484897DD589A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/Logging_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = 67255AF4E60849E5B7A691F8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/Logging_aaf2dot.h */; };
+		61E569E8C25440D1871D8824 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotGraph.cpp */ = {isa = PBXBuildFile; fileRef = 740F9FDE1D8645DE9E708E4F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotGraph.cpp */; };
+		65EF15C7A33242F78BCF9CEC /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 2469BE8FF4B643D3B500F817 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/CMakeLists.txt */; };
+		69023D2E94F742CC9D4D9B2C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.c */ = {isa = PBXBuildFile; fileRef = C2D48ECEB9E142F1B333B03A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.c */; };
+		69370DE37E024346997A4249 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.h */ = {isa = PBXBuildFile; fileRef = E9F004E7F2F340BB99A06A0D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.h */; };
+		6A38C685D7C04BFFB8865B20 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/aafextract.cpp */ = {isa = PBXBuildFile; fileRef = 036C646259044A578BC5E340 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/aafextract.cpp */; };
+		6B089E6F80724D099E79F2E2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.h */ = {isa = PBXBuildFile; fileRef = 93C19126DA944235BA84E4C1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.h */; };
+		6D38AC60E34E45DB8334E791 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.cpp */ = {isa = PBXBuildFile; fileRef = CA6278AA61594CC9932CAB58 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.cpp */; };
+		6EBB122BF11C46A287DAD5D8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotElement_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = 1F470892AACC4CFF84C71ECB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotElement_aaf2dot.h */; };
+		71A6100F485D4E63B53A5D8B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.cpp */ = {isa = PBXBuildFile; fileRef = 571FCCD543B44A078027FEE3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.cpp */; };
+		721CFEAAE29546ABA303C7F0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotGraph_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = 6107A441C33143B29A2A0ABD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotGraph_aaf2dot.h */; };
+		727FF2A632FE4106B20DE1D8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotThingWithID_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = FEB92B0E56BE463398886CE8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotThingWithID_aaf2dot.h */; };
+		739279F506C64F9F9F628380 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.h */ = {isa = PBXBuildFile; fileRef = B14CE44E01E84AFBB8466F78 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.h */; };
+		77DBF9DED00142F58087F8A6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Logging.cpp */ = {isa = PBXBuildFile; fileRef = 99FE189690294E018C91C9E3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Logging.cpp */; };
+		798CF4B9809B47D99ABDA83B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotSubGraph.cpp */ = {isa = PBXBuildFile; fileRef = 0D2B24DD4CF9465CAB2D3AF2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotSubGraph.cpp */; };
+		81D5BBC8E8B54930B01BEAFD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.cpp */ = {isa = PBXBuildFile; fileRef = E5542440CAC84A698C0447A1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.cpp */; };
+		850C3DD956FA4FD7BED3A226 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotEdge_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = 154A2E7FB7FB4526AA7FEF9B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotEdge_aaf2dot.h */; };
+		86EB59C9C0D74EA588975C0F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.cpp */ = {isa = PBXBuildFile; fileRef = 1DA6AA535B4946C89E436404 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.cpp */; };
+		8C37B930854F458493D47E5F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotElement_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = CA4C7F281F024B4C9FFD9A25 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotElement_aafmeta2dot.h */; };
+		934F2FA4074341249059E9A5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot.cpp */ = {isa = PBXBuildFile; fileRef = FEB4F0C4D9EE40F296882580 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot.cpp */; };
+		97E72B37FA4C4626852961A7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot.cpp */ = {isa = PBXBuildFile; fileRef = CCD77D3F6941432A922B9274 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot.cpp */; };
+		99CA59A746A4459B9E8698FB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.h */ = {isa = PBXBuildFile; fileRef = E335644BA46B4FF6982A431A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.h */; };
+		9BBACDAEFD7442809742E1DF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotSubGraph_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = CFA962A9095D42EEBF478D33 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotSubGraph_aafmeta2dot.h */; };
+		9C6A6A63AC08451D8891B3E1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotFactory.cpp */ = {isa = PBXBuildFile; fileRef = A254CC194BC549EE8ADF1E06 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotFactory.cpp */; };
+		9D673564192E470FB4263BFD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotEdge.cpp */ = {isa = PBXBuildFile; fileRef = EB89A95833A946AA9B3E9803 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotEdge.cpp */; };
+		A3216D0144D349B2B6981236 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.h */ = {isa = PBXBuildFile; fileRef = E2391BCFAA2941ADB515F077 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.h */; };
+		A617B5DB62BF41EA8332CF44 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotRecordNode_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = 5B244AAE15154B4D91D658B9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotRecordNode_aafmeta2dot.h */; };
+		AB4F2C3260E34CB3BF5DE94A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.h */ = {isa = PBXBuildFile; fileRef = E7CCC7D31D314806AAA402E0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.h */; };
+		AE660CF5C9744904BEBDCB86 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.h */ = {isa = PBXBuildFile; fileRef = B3728D1D624B440D8DBBFDB5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.h */; };
+		AF6CB7FA16DC4C2E8A1FDCC3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.cpp */ = {isa = PBXBuildFile; fileRef = 35C6AC6AAEBC4496947B939E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.cpp */; };
+		B09A1D73EDAE4BC78E3DBAE2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.h */ = {isa = PBXBuildFile; fileRef = 87D79AB9C7A34254989F1FC6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.h */; };
+		B2FB95E628F84C26B10DCCAD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.cpp */ = {isa = PBXBuildFile; fileRef = 9EC8C9B8745849149319E3D3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.cpp */; };
+		B8B336E8192644F5A6F5FEF8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Utilities.cpp */ = {isa = PBXBuildFile; fileRef = 29E06EFEA80A40C680AFCECC /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Utilities.cpp */; };
+		C228BDC1EA7B404D8ADD3B11 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/Utilities_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = 6E15D3EC923D4BA3B7AAEE73 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/Utilities_aafmeta2dot.h */; };
+		C27CFF444FD34376BE61015B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/aaffmtconv.cpp */ = {isa = PBXBuildFile; fileRef = FF57269336EC474299695055 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/aaffmtconv.cpp */; };
+		C731C76D3D3A4F4F89BA4C20 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotRecordNode.cpp */ = {isa = PBXBuildFile; fileRef = 9B95E10F9EAE42F3B0826167 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotRecordNode.cpp */; };
+		C7AF5CDAABD945C29284EE1F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 083829FF58484847A4F9A890 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/CMakeLists.txt */; };
+		D5A9FE1DBB164BC5B388DFC5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.cpp */ = {isa = PBXBuildFile; fileRef = 1DC17AF3FB7C41CEBF5B1BAE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.cpp */; };
+		D6AF6456DEC644549F26A24E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.h */ = {isa = PBXBuildFile; fileRef = 081BF331B94E408787173FD2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.h */; };
+		D947386A286640ABB8737B43 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.cpp */ = {isa = PBXBuildFile; fileRef = 9FC3E40F54C14EA99239EAD4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.cpp */; };
+		E3418EA46B9C42F9BA9C8715 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.h */ = {isa = PBXBuildFile; fileRef = DBA5CA60CDC1477C85D86D02 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.h */; };
+		EA6E7F5456C247E3962944D9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotRecordNode.cpp */ = {isa = PBXBuildFile; fileRef = 5A639865037E494CA1670EFD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotRecordNode.cpp */; };
+		EE7381D4E28144E1BE765D6A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotElement.cpp */ = {isa = PBXBuildFile; fileRef = 992B19AA56AA4716ABAB6383 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotElement.cpp */; };
+		F0785672EBB945D385480E99 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/Logging_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = DD4EF9FE9FAD48DDBDD77EC7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/Logging_aafmeta2dot.h */; };
+		F472CD549DE74EF69DA3B745 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotGraph.cpp */ = {isa = PBXBuildFile; fileRef = 5B14ADF628FE48F6908E315F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotGraph.cpp */; };
+		F54E9FEA6E3B46A4AD3C636E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Utilities.cpp */ = {isa = PBXBuildFile; fileRef = 07511FAE2D4147A8BFAED055 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Utilities.cpp */; };
+		F59E2530E1594E0C819B25B4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotGraph_aafmeta2dot.h */ = {isa = PBXBuildFile; fileRef = 3BF33201C9C24BFB87896312 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotGraph_aafmeta2dot.h */; };
+		F6DC988B19474E6DB0B3DB1F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A4F4E3BA96454BD68DDC20C2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/CMakeLists.txt */; };
+		FB99CBBF2CD347ED8C73C89C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotFactory_aaf2dot.h */ = {isa = PBXBuildFile; fileRef = 83F7BB2EA9304764979EFCFA /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotFactory_aaf2dot.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		0C9E5F29EB3E42C7B41C5045 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		5A3D8824169849E3877CF060 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		6CB5C7525FEC4B3487DB2E20 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		6CD5044EDA654B2F8F48A307 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		176D1E87BC054A3681DBE1A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB2C9DE54C99D795C91EA35;
+			remoteInfo = aafmeta2dot;
+		};
+		31AE4AB01DC24A399D2D8409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1C08E9286E162ABAB8A2E1B;
+			remoteInfo = aafembed;
+		};
+		335952B2165C47D094EE94C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66E5FADC17BC348BB421F929;
+			remoteInfo = ZERO_CHECK;
+		};
+		346A94BAC08C4183BE53D871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 366861E59BF070A46C643C5E;
+			remoteInfo = aafextract;
+		};
+		43A2DB9A16174AAC9D8F034A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D7BDEC482429A1158C9EC93;
+			remoteInfo = eli2aaf;
+		};
+		5DDA75DBD01544CA83095151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D7BDEC482429A1158C9EC93;
+			remoteInfo = eli2aaf;
+		};
+		5F1165F44E2C4AA59F205BE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04F125B6840402A7AB191F00;
+			remoteInfo = aaf2dot;
+		};
+		73980A4CEC4A4CCA80A4D735 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04F125B6840402A7AB191F00;
+			remoteInfo = aaf2dot;
+		};
+		9ABE5167D24448B3A0D6BA3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB2C9DE54C99D795C91EA35;
+			remoteInfo = aafmeta2dot;
+		};
+		A311D5B87C0040BB84E92EC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1C08E9286E162ABAB8A2E1B;
+			remoteInfo = aafembed;
+		};
+		C358DF4DE0B94376A7DB8A6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 366861E59BF070A46C643C5E;
+			remoteInfo = aafextract;
+		};
+		EA45A748290A4FA394506A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61D7035C68568F8F9EC15C7C;
+			remoteInfo = aaffmtconv;
+		};
+		F5ECCABFFD1D47F294C9619C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66E5FADC17BC348BB421F929;
+			remoteInfo = ZERO_CHECK;
+		};
+		FE0FEE9539004E3C99A34710 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15E58872F90422781CC05CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61D7035C68568F8F9EC15C7C;
+			remoteInfo = aaffmtconv;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F24C90AD354A3D86936FC9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotElement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_DotElement.cpp; path = aafviewer/src/aaf2dot/aaf2dot_DotElement.cpp; sourceTree = SOURCE_ROOT; };
+		02A27F25870E4856A4677701 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = aafviewer/src/aafmeta2dot/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		036C646259044A578BC5E340 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/aafextract.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafextract.cpp; path = aafextract/aafextract.cpp; sourceTree = SOURCE_ROOT; };
+		07511FAE2D4147A8BFAED055 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Utilities.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_Utilities.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_Utilities.cpp; sourceTree = SOURCE_ROOT; };
+		081BF331B94E408787173FD2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFMetaMapProfile.h; path = aafviewer/src/aafmeta2dot/AAFMetaMapProfile.h; sourceTree = SOURCE_ROOT; };
+		083829FF58484847A4F9A890 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = aafviewer/src/aaf2dot/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		092658A006DA4998B62225E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/Utilities_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Utilities_aaf2dot.h; path = aafviewer/src/aaf2dot/Utilities_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		0D2B24DD4CF9465CAB2D3AF2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotSubGraph.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_DotSubGraph.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_DotSubGraph.cpp; sourceTree = SOURCE_ROOT; };
+		0DB79BA7A84244469407B18F /* aafembed */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = aafembed; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EF39AD68E99499BA8AB88C4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFDotHome.h; path = aafviewer/src/aafmeta2dot/AAFDotHome.h; sourceTree = SOURCE_ROOT; };
+		154A2E7FB7FB4526AA7FEF9B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotEdge_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotEdge_aaf2dot.h; path = aafviewer/src/aaf2dot/DotEdge_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		1DA6AA535B4946C89E436404 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFMetaMapProfile.cpp; path = aafviewer/src/aafmeta2dot/AAFMetaMapProfile.cpp; sourceTree = SOURCE_ROOT; };
+		1DC17AF3FB7C41CEBF5B1BAE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFDefinitionHome.cpp; path = aafviewer/src/aafmeta2dot/AAFDefinitionHome.cpp; sourceTree = SOURCE_ROOT; };
+		1F470892AACC4CFF84C71ECB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotElement_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotElement_aaf2dot.h; path = aafviewer/src/aaf2dot/DotElement_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		2469BE8FF4B643D3B500F817 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = aaffmtconv/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		29E06EFEA80A40C680AFCECC /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Utilities.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_Utilities.cpp; path = aafviewer/src/aaf2dot/aaf2dot_Utilities.cpp; sourceTree = SOURCE_ROOT; };
+		2B1F91DC08644F8BBAE6A314 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFClassDefinition.cpp; path = aafviewer/src/aafmeta2dot/AAFClassDefinition.cpp; sourceTree = SOURCE_ROOT; };
+		2D35AA03638941AD8089B20D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = aafembed/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		35C6AC6AAEBC4496947B939E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DotProfile.cpp; path = aafviewer/src/aafmeta2dot/DotProfile.cpp; sourceTree = SOURCE_ROOT; };
+		3BF33201C9C24BFB87896312 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotGraph_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotGraph_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/DotGraph_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		401F436215774C53A6C79BFB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Logging.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_Logging.cpp; path = aafviewer/src/aaf2dot/aaf2dot_Logging.cpp; sourceTree = SOURCE_ROOT; };
+		452F6C8255E54A5D982FD073 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFMetaDefinition.cpp; path = aafviewer/src/aafmeta2dot/AAFMetaDefinition.cpp; sourceTree = SOURCE_ROOT; };
+		4AA3946D9BAF4D0C9E0F1793 /* aafextract */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = aafextract; sourceTree = BUILT_PRODUCTS_DIR; };
+		571FCCD543B44A078027FEE3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFDotInstanceMapper.cpp; path = aafviewer/src/aaf2dot/AAFDotInstanceMapper.cpp; sourceTree = SOURCE_ROOT; };
+		5A639865037E494CA1670EFD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotRecordNode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_DotRecordNode.cpp; path = aafviewer/src/aaf2dot/aaf2dot_DotRecordNode.cpp; sourceTree = SOURCE_ROOT; };
+		5B14ADF628FE48F6908E315F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotGraph.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_DotGraph.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_DotGraph.cpp; sourceTree = SOURCE_ROOT; };
+		5B244AAE15154B4D91D658B9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotRecordNode_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotRecordNode_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/DotRecordNode_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		5B9A81D1B83C465E92C4DE90 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotSubGraph_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotSubGraph_aaf2dot.h; path = aafviewer/src/aaf2dot/DotSubGraph_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		6107A441C33143B29A2A0ABD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotGraph_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotGraph_aaf2dot.h; path = aafviewer/src/aaf2dot/DotGraph_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		629FA791268B4F2081CF699F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotThingWithID_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotThingWithID_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/DotThingWithID_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		67255AF4E60849E5B7A691F8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/Logging_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Logging_aaf2dot.h; path = aafviewer/src/aaf2dot/Logging_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		6E15D3EC923D4BA3B7AAEE73 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/Utilities_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Utilities_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/Utilities_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		6FDE0DC25700491BB595CB32 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AxBaseObjIterExt.h; path = aafviewer/src/aaf2dot/AxBaseObjIterExt.h; sourceTree = SOURCE_ROOT; };
+		740F9FDE1D8645DE9E708E4F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotGraph.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_DotGraph.cpp; path = aafviewer/src/aaf2dot/aaf2dot_DotGraph.cpp; sourceTree = SOURCE_ROOT; };
+		75B0CAE132484E89B79E4699 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/aafembed.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafembed.cpp; path = aafembed/aafembed.cpp; sourceTree = SOURCE_ROOT; };
+		7C85CC6E597F401797BC97C6 /* aaffmtconv */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = aaffmtconv; sourceTree = BUILT_PRODUCTS_DIR; };
+		81CE0364806349EDBF97F734 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotFactory_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotFactory_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/DotFactory_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		83F7BB2EA9304764979EFCFA /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotFactory_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotFactory_aaf2dot.h; path = aafviewer/src/aaf2dot/DotFactory_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		87D79AB9C7A34254989F1FC6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MapperSettings.h; path = aafviewer/src/aaf2dot/MapperSettings.h; sourceTree = SOURCE_ROOT; };
+		885FD5C7AF494FA495E6C220 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotSubGraph.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_DotSubGraph.cpp; path = aafviewer/src/aaf2dot/aaf2dot_DotSubGraph.cpp; sourceTree = SOURCE_ROOT; };
+		93C19126DA944235BA84E4C1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFPropertyDefinition.h; path = aafviewer/src/aafmeta2dot/AAFPropertyDefinition.h; sourceTree = SOURCE_ROOT; };
+		992B19AA56AA4716ABAB6383 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotElement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_DotElement.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_DotElement.cpp; sourceTree = SOURCE_ROOT; };
+		99FE189690294E018C91C9E3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Logging.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_Logging.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_Logging.cpp; sourceTree = SOURCE_ROOT; };
+		9A911407DA5547FE9A13A1EB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotThingWithID.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_DotThingWithID.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_DotThingWithID.cpp; sourceTree = SOURCE_ROOT; };
+		9B95E10F9EAE42F3B0826167 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotRecordNode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_DotRecordNode.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_DotRecordNode.cpp; sourceTree = SOURCE_ROOT; };
+		9BC8B8F6C29E4DBC9806A273 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFTypeDefinition.cpp; path = aafviewer/src/aafmeta2dot/AAFTypeDefinition.cpp; sourceTree = SOURCE_ROOT; };
+		9EC8C9B8745849149319E3D3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFXsMapper.cpp; path = aafviewer/src/aafmeta2dot/AAFXsMapper.cpp; sourceTree = SOURCE_ROOT; };
+		9FC3E40F54C14EA99239EAD4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFDotHome.cpp; path = aafviewer/src/aafmeta2dot/AAFDotHome.cpp; sourceTree = SOURCE_ROOT; };
+		A254CC194BC549EE8ADF1E06 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotFactory.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_DotFactory.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_DotFactory.cpp; sourceTree = SOURCE_ROOT; };
+		A4F4E3BA96454BD68DDC20C2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = aafextract/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A76ACB0EFD124FC69408C302 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotFactory.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_DotFactory.cpp; path = aafviewer/src/aaf2dot/aaf2dot_DotFactory.cpp; sourceTree = SOURCE_ROOT; };
+		B14CE44E01E84AFBB8466F78 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFDotInstanceMapper.h; path = aafviewer/src/aaf2dot/AAFDotInstanceMapper.h; sourceTree = SOURCE_ROOT; };
+		B187A21D434E4D38B44CC984 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = InstanceMapperProfile.cpp; path = aafviewer/src/aaf2dot/InstanceMapperProfile.cpp; sourceTree = SOURCE_ROOT; };
+		B3728D1D624B440D8DBBFDB5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotLogging.h; path = aafviewer/src/aafmeta2dot/DotLogging.h; sourceTree = SOURCE_ROOT; };
+		B80EAC75CCEF4F49A7FB676F /* aafmeta2dot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = aafmeta2dot; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82AABBFF9344A30866B0D35 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotProfile.h; path = aafviewer/src/aafmeta2dot/DotProfile.h; sourceTree = SOURCE_ROOT; };
+		C29B4548BBD34A169874835B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AAFPropertyDefinition.cpp; path = aafviewer/src/aafmeta2dot/AAFPropertyDefinition.cpp; sourceTree = SOURCE_ROOT; };
+		C2D48ECEB9E142F1B333B03A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = avilib.c; path = aafembed/avilib.c; sourceTree = SOURCE_ROOT; };
+		CA4C7F281F024B4C9FFD9A25 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotElement_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotElement_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/DotElement_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		CA6278AA61594CC9932CAB58 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MapperSettings.cpp; path = aafviewer/src/aaf2dot/MapperSettings.cpp; sourceTree = SOURCE_ROOT; };
+		CBBA172DCC3B4EABA49F5DA9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/eli2aaf_utilities.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = eli2aaf_utilities.cpp; path = eli2aaf/eli2aaf_utilities.cpp; sourceTree = SOURCE_ROOT; };
+		CCD77D3F6941432A922B9274 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot.cpp; path = aafviewer/src/aaf2dot/aaf2dot.cpp; sourceTree = SOURCE_ROOT; };
+		CDFE5D51DBB24FE3AD77BD98 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotUtilities.h; path = aafviewer/src/aafmeta2dot/DotUtilities.h; sourceTree = SOURCE_ROOT; };
+		CE04E1ACC0904974B243AE54 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFTypeDefinition.h; path = aafviewer/src/aafmeta2dot/AAFTypeDefinition.h; sourceTree = SOURCE_ROOT; };
+		CFA962A9095D42EEBF478D33 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotSubGraph_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotSubGraph_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/DotSubGraph_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		D03A1A64101E4EF7A5A3DADF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotThingWithID.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_DotThingWithID.cpp; path = aafviewer/src/aaf2dot/aaf2dot_DotThingWithID.cpp; sourceTree = SOURCE_ROOT; };
+		D21D20EFC77D4B908B3EAC76 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DotUtilities.cpp; path = aafviewer/src/aafmeta2dot/DotUtilities.cpp; sourceTree = SOURCE_ROOT; };
+		D3483C60D96641BBBAD7EA1E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AxBaseObjIterExt.cpp; path = aafviewer/src/aaf2dot/AxBaseObjIterExt.cpp; sourceTree = SOURCE_ROOT; };
+		D4C3BDEE2803445190702EB6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotRecordNode_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotRecordNode_aaf2dot.h; path = aafviewer/src/aaf2dot/DotRecordNode_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		D8324E73E2994C18B5246D0C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotEdge.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaf2dot_DotEdge.cpp; path = aafviewer/src/aaf2dot/aaf2dot_DotEdge.cpp; sourceTree = SOURCE_ROOT; };
+		DB85BD2BEC514A6AA88323B2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = eli2aaf/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DBA5CA60CDC1477C85D86D02 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InstanceMapperProfile.h; path = aafviewer/src/aaf2dot/InstanceMapperProfile.h; sourceTree = SOURCE_ROOT; };
+		DD4EF9FE9FAD48DDBDD77EC7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/Logging_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Logging_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/Logging_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		E2391BCFAA2941ADB515F077 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = avilib.h; path = aafembed/avilib.h; sourceTree = SOURCE_ROOT; };
+		E335644BA46B4FF6982A431A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFClassDefinition.h; path = aafviewer/src/aafmeta2dot/AAFClassDefinition.h; sourceTree = SOURCE_ROOT; };
+		E5542440CAC84A698C0447A1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DotLogging.cpp; path = aafviewer/src/aafmeta2dot/DotLogging.cpp; sourceTree = SOURCE_ROOT; };
+		E722751B1EE94D4A8EA3B036 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotEdge_aafmeta2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotEdge_aafmeta2dot.h; path = aafviewer/src/aafmeta2dot/DotEdge_aafmeta2dot.h; sourceTree = SOURCE_ROOT; };
+		E7CCC7D31D314806AAA402E0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFDefinitionHome.h; path = aafviewer/src/aafmeta2dot/AAFDefinitionHome.h; sourceTree = SOURCE_ROOT; };
+		E9F004E7F2F340BB99A06A0D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFMetaDefinition.h; path = aafviewer/src/aafmeta2dot/AAFMetaDefinition.h; sourceTree = SOURCE_ROOT; };
+		EB89A95833A946AA9B3E9803 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotEdge.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot_DotEdge.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot_DotEdge.cpp; sourceTree = SOURCE_ROOT; };
+		F10E7B2218CF400D9BFE3A36 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F82C34AD104042738DC4FFBE /* aaf2dot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = aaf2dot; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9970278D3D34B6F8430EAE0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FB41D5C78AAF444580878286 /* eli2aaf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = eli2aaf; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBA2D9D897444A03A9C25EE1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AAFXsMapper.h; path = aafviewer/src/aafmeta2dot/AAFXsMapper.h; sourceTree = SOURCE_ROOT; };
+		FEB4F0C4D9EE40F296882580 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aafmeta2dot.cpp; path = aafviewer/src/aafmeta2dot/aafmeta2dot.cpp; sourceTree = SOURCE_ROOT; };
+		FEB92B0E56BE463398886CE8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotThingWithID_aaf2dot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DotThingWithID_aaf2dot.h; path = aafviewer/src/aaf2dot/DotThingWithID_aaf2dot.h; sourceTree = SOURCE_ROOT; };
+		FF57269336EC474299695055 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/aaffmtconv.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = aaffmtconv.cpp; path = aaffmtconv/aaffmtconv.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		177F6CE624234683852DA726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24353FA6869A4D7FBDAB6C31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		473B145F17834D819400292D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480FC048F5DA4837A19D083D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E991AE9A6184B128496092C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FB4C511FB548A4BF313212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B831AA2D7154FD48C92BDD2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				036C646259044A578BC5E340 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/aafextract.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		12759C5705EB46D89D7D4B66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25DCD6F5C46E479AA09CE06F /* eli2aaf */ = {
+			isa = PBXGroup;
+			children = (
+				4A5466B8CF324BAABADA9530 /* Source Files */,
+				DB85BD2BEC514A6AA88323B2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/CMakeLists.txt */,
+			);
+			name = eli2aaf;
+			sourceTree = "<group>";
+		};
+		333C1516D7874F51B34E070C /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				E335644BA46B4FF6982A431A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.h */,
+				E7CCC7D31D314806AAA402E0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.h */,
+				0EF39AD68E99499BA8AB88C4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.h */,
+				E9F004E7F2F340BB99A06A0D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.h */,
+				081BF331B94E408787173FD2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.h */,
+				93C19126DA944235BA84E4C1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.h */,
+				CE04E1ACC0904974B243AE54 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.h */,
+				FBA2D9D897444A03A9C25EE1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.h */,
+				E722751B1EE94D4A8EA3B036 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotEdge_aafmeta2dot.h */,
+				CA4C7F281F024B4C9FFD9A25 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotElement_aafmeta2dot.h */,
+				81CE0364806349EDBF97F734 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotFactory_aafmeta2dot.h */,
+				3BF33201C9C24BFB87896312 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotGraph_aafmeta2dot.h */,
+				B3728D1D624B440D8DBBFDB5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.h */,
+				B82AABBFF9344A30866B0D35 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.h */,
+				5B244AAE15154B4D91D658B9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotRecordNode_aafmeta2dot.h */,
+				CFA962A9095D42EEBF478D33 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotSubGraph_aafmeta2dot.h */,
+				629FA791268B4F2081CF699F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotThingWithID_aafmeta2dot.h */,
+				CDFE5D51DBB24FE3AD77BD98 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.h */,
+				DD4EF9FE9FAD48DDBDD77EC7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/Logging_aafmeta2dot.h */,
+				6E15D3EC923D4BA3B7AAEE73 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/Utilities_aafmeta2dot.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		415199951C824A7CADF508AB /* MakeSDKUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				F10E7B2218CF400D9BFE3A36 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/CMakeLists.txt */,
+			);
+			name = MakeSDKUtilities;
+			sourceTree = "<group>";
+		};
+		4A5466B8CF324BAABADA9530 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBBA172DCC3B4EABA49F5DA9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/eli2aaf_utilities.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		4E5556064D8B4356B39455AE /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				75B0CAE132484E89B79E4699 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/aafembed.cpp */,
+				C2D48ECEB9E142F1B333B03A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5D4C0F6F7DD546BF9E7FB8B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		68F6B490E5DC4C8D8CC0E799 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B14CE44E01E84AFBB8466F78 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.h */,
+				6FDE0DC25700491BB595CB32 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.h */,
+				154A2E7FB7FB4526AA7FEF9B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotEdge_aaf2dot.h */,
+				1F470892AACC4CFF84C71ECB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotElement_aaf2dot.h */,
+				83F7BB2EA9304764979EFCFA /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotFactory_aaf2dot.h */,
+				6107A441C33143B29A2A0ABD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotGraph_aaf2dot.h */,
+				D4C3BDEE2803445190702EB6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotRecordNode_aaf2dot.h */,
+				5B9A81D1B83C465E92C4DE90 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotSubGraph_aaf2dot.h */,
+				FEB92B0E56BE463398886CE8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/DotThingWithID_aaf2dot.h */,
+				DBA5CA60CDC1477C85D86D02 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.h */,
+				67255AF4E60849E5B7A691F8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/Logging_aaf2dot.h */,
+				87D79AB9C7A34254989F1FC6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.h */,
+				092658A006DA4998B62225E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/Utilities_aaf2dot.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		6D75D86662E446FBA7104FEC /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2391BCFAA2941ADB515F077 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		83CBA3CBFE67473FB956D4B1 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8B070D25C7564DFF8C6AB316 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F82C34AD104042738DC4FFBE /* aaf2dot */,
+				0DB79BA7A84244469407B18F /* aafembed */,
+				4AA3946D9BAF4D0C9E0F1793 /* aafextract */,
+				7C85CC6E597F401797BC97C6 /* aaffmtconv */,
+				B80EAC75CCEF4F49A7FB676F /* aafmeta2dot */,
+				FB41D5C78AAF444580878286 /* eli2aaf */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CA09882400041C68B92F041 /* aaf2dot */ = {
+			isa = PBXGroup;
+			children = (
+				68F6B490E5DC4C8D8CC0E799 /* Header Files */,
+				FE7DCF60513A47BF8DBE7781 /* Source Files */,
+				083829FF58484847A4F9A890 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/CMakeLists.txt */,
+			);
+			name = aaf2dot;
+			sourceTree = "<group>";
+		};
+		92A119868EB84C828239C567 /* aafextract */ = {
+			isa = PBXGroup;
+			children = (
+				0B831AA2D7154FD48C92BDD2 /* Source Files */,
+				A4F4E3BA96454BD68DDC20C2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/CMakeLists.txt */,
+			);
+			name = aafextract;
+			sourceTree = "<group>";
+		};
+		93E00FED93CC46A4BECB8D2C /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				83CBA3CBFE67473FB956D4B1 /* CMake Rules */,
+				F9970278D3D34B6F8430EAE0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		9E848D996AC444F19EAEEB4A /* aaffmtconv */ = {
+			isa = PBXGroup;
+			children = (
+				ED4CD74D4B9A4218A60BBB05 /* Source Files */,
+				2469BE8FF4B643D3B500F817 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/CMakeLists.txt */,
+			);
+			name = aaffmtconv;
+			sourceTree = "<group>";
+		};
+		BB35CF199F324059B0FA5F17 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B1F91DC08644F8BBAE6A314 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.cpp */,
+				1DC17AF3FB7C41CEBF5B1BAE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.cpp */,
+				9FC3E40F54C14EA99239EAD4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.cpp */,
+				452F6C8255E54A5D982FD073 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.cpp */,
+				1DA6AA535B4946C89E436404 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.cpp */,
+				C29B4548BBD34A169874835B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.cpp */,
+				9BC8B8F6C29E4DBC9806A273 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.cpp */,
+				9EC8C9B8745849149319E3D3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.cpp */,
+				E5542440CAC84A698C0447A1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.cpp */,
+				35C6AC6AAEBC4496947B939E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.cpp */,
+				D21D20EFC77D4B908B3EAC76 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.cpp */,
+				FEB4F0C4D9EE40F296882580 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot.cpp */,
+				EB89A95833A946AA9B3E9803 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotEdge.cpp */,
+				992B19AA56AA4716ABAB6383 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotElement.cpp */,
+				A254CC194BC549EE8ADF1E06 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotFactory.cpp */,
+				5B14ADF628FE48F6908E315F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotGraph.cpp */,
+				9B95E10F9EAE42F3B0826167 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotRecordNode.cpp */,
+				0D2B24DD4CF9465CAB2D3AF2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotSubGraph.cpp */,
+				9A911407DA5547FE9A13A1EB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotThingWithID.cpp */,
+				99FE189690294E018C91C9E3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Logging.cpp */,
+				07511FAE2D4147A8BFAED055 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Utilities.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D51623D891484B9E9D2177B9 /* aafembed */ = {
+			isa = PBXGroup;
+			children = (
+				6D75D86662E446FBA7104FEC /* Header Files */,
+				4E5556064D8B4356B39455AE /* Source Files */,
+				2D35AA03638941AD8089B20D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/CMakeLists.txt */,
+			);
+			name = aafembed;
+			sourceTree = "<group>";
+		};
+		E0E09C2A06924E93948A2A6C = {
+			isa = PBXGroup;
+			children = (
+				93E00FED93CC46A4BECB8D2C /* ALL_BUILD */,
+				415199951C824A7CADF508AB /* MakeSDKUtilities */,
+				8CA09882400041C68B92F041 /* aaf2dot */,
+				D51623D891484B9E9D2177B9 /* aafembed */,
+				92A119868EB84C828239C567 /* aafextract */,
+				9E848D996AC444F19EAEEB4A /* aaffmtconv */,
+				EBA0C389566A401189857670 /* aafmeta2dot */,
+				25DCD6F5C46E479AA09CE06F /* eli2aaf */,
+				8B070D25C7564DFF8C6AB316 /* Products */,
+				12759C5705EB46D89D7D4B66 /* Frameworks */,
+				5D4C0F6F7DD546BF9E7FB8B0 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		EBA0C389566A401189857670 /* aafmeta2dot */ = {
+			isa = PBXGroup;
+			children = (
+				333C1516D7874F51B34E070C /* Header Files */,
+				BB35CF199F324059B0FA5F17 /* Source Files */,
+				02A27F25870E4856A4677701 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/CMakeLists.txt */,
+			);
+			name = aafmeta2dot;
+			sourceTree = "<group>";
+		};
+		ED4CD74D4B9A4218A60BBB05 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF57269336EC474299695055 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/aaffmtconv.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		FE7DCF60513A47BF8DBE7781 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				571FCCD543B44A078027FEE3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.cpp */,
+				D3483C60D96641BBBAD7EA1E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.cpp */,
+				B187A21D434E4D38B44CC984 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.cpp */,
+				CA6278AA61594CC9932CAB58 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.cpp */,
+				CCD77D3F6941432A922B9274 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot.cpp */,
+				D8324E73E2994C18B5246D0C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotEdge.cpp */,
+				01F24C90AD354A3D86936FC9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotElement.cpp */,
+				A76ACB0EFD124FC69408C302 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotFactory.cpp */,
+				740F9FDE1D8645DE9E708E4F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotGraph.cpp */,
+				5A639865037E494CA1670EFD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotRecordNode.cpp */,
+				885FD5C7AF494FA495E6C220 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotSubGraph.cpp */,
+				D03A1A64101E4EF7A5A3DADF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotThingWithID.cpp */,
+				401F436215774C53A6C79BFB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Logging.cpp */,
+				29E06EFEA80A40C680AFCECC /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Utilities.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04F125B6840402A7AB191F00 /* aaf2dot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EA25A7EFD444BEE87439860 /* Build configuration list for PBXNativeTarget "aaf2dot" */;
+			buildPhases = (
+				317D0174516A4304AC3FD540 /* Sources */,
+				93FB4C511FB548A4BF313212 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aaf2dot;
+			productName = aaf2dot;
+			productReference = F82C34AD104042738DC4FFBE /* aaf2dot */;
+			productType = "com.apple.product-type.tool";
+		};
+		366861E59BF070A46C643C5E /* aafextract */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F0922062B6A498B8F39CAD3 /* Build configuration list for PBXNativeTarget "aafextract" */;
+			buildPhases = (
+				D95D39FD5E7F4EBFA0477F05 /* Sources */,
+				473B145F17834D819400292D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aafextract;
+			productName = aafextract;
+			productReference = 4AA3946D9BAF4D0C9E0F1793 /* aafextract */;
+			productType = "com.apple.product-type.tool";
+		};
+		4D7BDEC482429A1158C9EC93 /* eli2aaf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1604068AD7F641A5829BBBF3 /* Build configuration list for PBXNativeTarget "eli2aaf" */;
+			buildPhases = (
+				5F8287F027B44CC8BB02EAB9 /* Sources */,
+				480FC048F5DA4837A19D083D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eli2aaf;
+			productName = eli2aaf;
+			productReference = FB41D5C78AAF444580878286 /* eli2aaf */;
+			productType = "com.apple.product-type.tool";
+		};
+		61D7035C68568F8F9EC15C7C /* aaffmtconv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147DDF44DA174111B2B84BE7 /* Build configuration list for PBXNativeTarget "aaffmtconv" */;
+			buildPhases = (
+				7D721A7A88C64E3B942B9090 /* Sources */,
+				5E991AE9A6184B128496092C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aaffmtconv;
+			productName = aaffmtconv;
+			productReference = 7C85CC6E597F401797BC97C6 /* aaffmtconv */;
+			productType = "com.apple.product-type.tool";
+		};
+		BEB2C9DE54C99D795C91EA35 /* aafmeta2dot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 447B2F559D2045A18239A7EB /* Build configuration list for PBXNativeTarget "aafmeta2dot" */;
+			buildPhases = (
+				6F4109C12BE349BB9B96C7AB /* Sources */,
+				24353FA6869A4D7FBDAB6C31 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aafmeta2dot;
+			productName = aafmeta2dot;
+			productReference = B80EAC75CCEF4F49A7FB676F /* aafmeta2dot */;
+			productType = "com.apple.product-type.tool";
+		};
+		E1C08E9286E162ABAB8A2E1B /* aafembed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BAFBC3AAC3F4232B2AD596A /* Build configuration list for PBXNativeTarget "aafembed" */;
+			buildPhases = (
+				8A769F63FC904A4B9F8CBBFD /* Sources */,
+				177F6CE624234683852DA726 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aafembed;
+			productName = aafembed;
+			productReference = 0DB79BA7A84244469407B18F /* aafembed */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E15E58872F90422781CC05CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2610;
+			};
+			buildConfigurationList = 97B2AA1F0AD54B65B04F880E /* Build configuration list for PBXProject "Utilities" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				5A3D8824169849E3877CF060 /* Debug */,
+				6CD5044EDA654B2F8F48A307 /* Release */,
+				6CB5C7525FEC4B3487DB2E20 /* MinSizeRel */,
+				0C9E5F29EB3E42C7B41C5045 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = E0E09C2A06924E93948A2A6C;
+			projectDirPath = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities";
+			projectRoot = "";
+			targets = (
+				F56AFFC068BFC9CE7B30930F /* ALL_BUILD */,
+				04F125B6840402A7AB191F00 /* aaf2dot */,
+				E1C08E9286E162ABAB8A2E1B /* aafembed */,
+				366861E59BF070A46C643C5E /* aafextract */,
+				61D7035C68568F8F9EC15C7C /* aaffmtconv */,
+				BEB2C9DE54C99D795C91EA35 /* aafmeta2dot */,
+				4D7BDEC482429A1158C9EC93 /* eli2aaf */,
+				ADCF5B29167502F78C1C2ACE /* MakeSDKUtilities */,
+				E3FD61174664A23BFF1DF788 /* RUN_TESTS */,
+				66E5FADC17BC348BB421F929 /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		003C8D08B0008F35F218E126 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  /opt/homebrew/bin/ctest -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  /opt/homebrew/bin/ctest -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  /opt/homebrew/bin/ctest -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  /opt/homebrew/bin/ctest -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		268D8CA7FB6D9AACC78611BF /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		74BA166E3FE5CDE805B37A4A = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		910A41151295C5F9742C25BD = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		EAD05BB00B7395706A16C786 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  make -f /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  make -f /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  make -f /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities
+  make -f /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/Utilities/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		317D0174516A4304AC3FD540 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71A6100F485D4E63B53A5D8B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AAFDotInstanceMapper.cpp */,
+				4661AAAFBE7E461BB9EDC837 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/AxBaseObjIterExt.cpp */,
+				5A81695AC1B14337B47DB7E6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/InstanceMapperProfile.cpp */,
+				6D38AC60E34E45DB8334E791 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/MapperSettings.cpp */,
+				97E72B37FA4C4626852961A7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot.cpp */,
+				3D474FCA5F2D46C184DC9416 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotEdge.cpp */,
+				1A83B18BE59949C8A7EE1F05 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotElement.cpp */,
+				15F3AEB691AE4B83A93D470F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotFactory.cpp */,
+				61E569E8C25440D1871D8824 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotGraph.cpp */,
+				EA6E7F5456C247E3962944D9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotRecordNode.cpp */,
+				4C552E75B92646F09EFF6725 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotSubGraph.cpp */,
+				5528BAF40A6B4A47892606C7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_DotThingWithID.cpp */,
+				10A23DAFD6464A3B8F5F1704 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Logging.cpp */,
+				B8B336E8192644F5A6F5FEF8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot/aaf2dot_Utilities.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8287F027B44CC8BB02EAB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08F1581047194412AB4258CD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/eli2aaf/eli2aaf_utilities.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F4109C12BE349BB9B96C7AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCC152C25B247C788C57E1B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFClassDefinition.cpp */,
+				D5A9FE1DBB164BC5B388DFC5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDefinitionHome.cpp */,
+				D947386A286640ABB8737B43 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFDotHome.cpp */,
+				4D16F3509BCB4B6CA03E822D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaDefinition.cpp */,
+				86EB59C9C0D74EA588975C0F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFMetaMapProfile.cpp */,
+				5811A4139DB348EF884CE8DE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFPropertyDefinition.cpp */,
+				3AD7E078A80D4E1CA33F16F4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFTypeDefinition.cpp */,
+				B2FB95E628F84C26B10DCCAD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/AAFXsMapper.cpp */,
+				81D5BBC8E8B54930B01BEAFD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotLogging.cpp */,
+				AF6CB7FA16DC4C2E8A1FDCC3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotProfile.cpp */,
+				5A0530E2277142499DA8E249 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/DotUtilities.cpp */,
+				934F2FA4074341249059E9A5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot.cpp */,
+				9D673564192E470FB4263BFD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotEdge.cpp */,
+				EE7381D4E28144E1BE765D6A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotElement.cpp */,
+				9C6A6A63AC08451D8891B3E1 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotFactory.cpp */,
+				F472CD549DE74EF69DA3B745 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotGraph.cpp */,
+				C731C76D3D3A4F4F89BA4C20 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotRecordNode.cpp */,
+				798CF4B9809B47D99ABDA83B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotSubGraph.cpp */,
+				2B4DD415774343DCA5FB644D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_DotThingWithID.cpp */,
+				77DBF9DED00142F58087F8A6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Logging.cpp */,
+				F54E9FEA6E3B46A4AD3C636E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot/aafmeta2dot_Utilities.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D721A7A88C64E3B942B9090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27CFF444FD34376BE61015B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aaffmtconv/aaffmtconv.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A769F63FC904A4B9F8CBBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6C6565DFAB4020B8C1A7A0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/aafembed.cpp */,
+				69023D2E94F742CC9D4D9B2C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95D39FD5E7F4EBFA0477F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A38C685D7C04BFFB8865B20 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract/aafextract.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F7DBB148820416DB1523DA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04F125B6840402A7AB191F00 /* aaf2dot */;
+			targetProxy = 5F1165F44E2C4AA59F205BE5 /* PBXContainerItemProxy */;
+		};
+		3E67E095F9ED4A7EB8090873 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 366861E59BF070A46C643C5E /* aafextract */;
+			targetProxy = C358DF4DE0B94376A7DB8A6F /* PBXContainerItemProxy */;
+		};
+		4002FAA15F42477DA573E8AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61D7035C68568F8F9EC15C7C /* aaffmtconv */;
+			targetProxy = FE0FEE9539004E3C99A34710 /* PBXContainerItemProxy */;
+		};
+		64AB0115F878469BA136ABA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66E5FADC17BC348BB421F929 /* ZERO_CHECK */;
+			targetProxy = 335952B2165C47D094EE94C4 /* PBXContainerItemProxy */;
+		};
+		65DCFD3E780C4C3DB179E732 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1C08E9286E162ABAB8A2E1B /* aafembed */;
+			targetProxy = 31AE4AB01DC24A399D2D8409 /* PBXContainerItemProxy */;
+		};
+		83FF6A8153A64941A6EB33C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1C08E9286E162ABAB8A2E1B /* aafembed */;
+			targetProxy = A311D5B87C0040BB84E92EC5 /* PBXContainerItemProxy */;
+		};
+		8E6D2D05AA8E4F57B2EE9439 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61D7035C68568F8F9EC15C7C /* aaffmtconv */;
+			targetProxy = EA45A748290A4FA394506A6C /* PBXContainerItemProxy */;
+		};
+		A9B9154F33514EB8981EAD6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 366861E59BF070A46C643C5E /* aafextract */;
+			targetProxy = 346A94BAC08C4183BE53D871 /* PBXContainerItemProxy */;
+		};
+		AEEBDF87DF26403DBD801CF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEB2C9DE54C99D795C91EA35 /* aafmeta2dot */;
+			targetProxy = 9ABE5167D24448B3A0D6BA3D /* PBXContainerItemProxy */;
+		};
+		C0EECEAB53004B6488382C0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D7BDEC482429A1158C9EC93 /* eli2aaf */;
+			targetProxy = 5DDA75DBD01544CA83095151 /* PBXContainerItemProxy */;
+		};
+		C20400C0537D4F30BA95B957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D7BDEC482429A1158C9EC93 /* eli2aaf */;
+			targetProxy = 43A2DB9A16174AAC9D8F034A /* PBXContainerItemProxy */;
+		};
+		CFBC39F8963941AEB2B76060 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEB2C9DE54C99D795C91EA35 /* aafmeta2dot */;
+			targetProxy = 176D1E87BC054A3681DBE1A6 /* PBXContainerItemProxy */;
+		};
+		DAEB127DCED2496EB6062D97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04F125B6840402A7AB191F00 /* aaf2dot */;
+			targetProxy = 73980A4CEC4A4CCA80A4D735 /* PBXContainerItemProxy */;
+		};
+		F1B8DAFAF4834A589B99623D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66E5FADC17BC348BB421F929 /* ZERO_CHECK */;
+			targetProxy = F5ECCABFFD1D47F294C9619C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0391F5C7073745979A10A255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MakeSDKUtilities;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		072636C0F87A4AA1856410D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/eli2aaf";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/libaxLib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = eli2aaf;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/eli2aaf.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		0C522422BB9E468FA0250203 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		0FE0EA7EAD964417AF77C376 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/eli2aaf/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaaflib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/RelWithDebInfo/libaxLib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = eli2aaf;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/eli2aaf.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1CD6DF8DC6E94F01BAC1EECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		2C4E8E44A3B94A95856FD41A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aaffmtconv";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aaffmtconv;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aaffmtconv.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		2EAFB10FFF7A49E0948AE2AE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3A49B752809E4EA3A37BE2C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafembed";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("    -DNDEBUG ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafembed;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafembed.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		3ABE6FB72BA04C3EBCF417E9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3F4B352F4F3C40B0B079E613 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafembed/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("    -DNDEBUG ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafembed;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafembed.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		47CCA709354049BDBB4463BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafembed";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("   ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafembed;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafembed.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		4F87BFB6FD3045E1838C32BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/eli2aaf";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/libaxLib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = eli2aaf;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/eli2aaf.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		5BF17A2D1FFA442A8E25722B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafviewer/aafmeta2dot";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/libaxLib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafmeta2dot;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafmeta2dot.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		5ECC52BDB26144A08B37B045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		5F4809EFE888425A9A666FE4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafviewer/aaf2dot/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaaflib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/RelWithDebInfo/libaxLib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aaf2dot;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aaf2dot.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		60DB483637BF4E36ABC469B6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		63CF23A5601047C0ACF2552A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafembed/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("       -DNDEBUG ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafembed;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafembed.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6BBB9B8CEEC74382AE69EA14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafextract";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafextract;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafextract.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		709284BCEB624D90B9FD40CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MakeSDKUtilities;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		7C7EA385AA56412B82D9F2A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafviewer/aaf2dot";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/libaxLib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aaf2dot;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aaf2dot.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		9F1657B731594159A4B7678F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		9F7E5A73631746CBBA650376 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/eli2aaf/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaaflib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/MinSizeRel/libaxLib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = eli2aaf;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/eli2aaf.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A64098A743E445B7A73B33D4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MakeSDKUtilities;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A8AF5E6D3B9A422A9B54340F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		ACC56403B2B04CAAA3072054 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aaffmtconv/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aaffmtconv;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aaffmtconv.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BA74D0BB4454444CA5432D3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafextract";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafextract;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafextract.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		BE9597FAA5E9449595D6781A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build";
+			};
+			name = Debug;
+		};
+		C10B25F4D4214949B6D48875 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafextract/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafextract;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafextract.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C84E11897E4D4B37906DFA70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafviewer/aafmeta2dot";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/libaxLib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafmeta2dot;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafmeta2dot.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		C86087259AC0480F8E1933FF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build";
+			};
+			name = MinSizeRel;
+		};
+		C8E28D5B8D9E433EA9D482BD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafextract/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafextract","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafextract;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafextract.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		CFB95C2CC9914FFA8F77531E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D74C2B0C335A41668027F0BD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafviewer/aafmeta2dot/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/MinSizeRel/libaxLib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafmeta2dot;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafmeta2dot.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E31E58E0EBFB4C929B2C9ED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		E39E7642B35E4C249A88CF84 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MakeSDKUtilities;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E3DB93C48A4F4445B1D84366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafviewer/aaf2dot";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/libaxLib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aaf2dot;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aaf2dot.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		E3DCAC20ECEB4871B0EA6901 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E4A5D3E05905473BAFFB42A6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aaffmtconv/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aaffmtconv;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aaffmtconv.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E7B5ABD5E74C4FD9A2D654BE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafviewer/aafmeta2dot/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aafmeta2dot","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/RelWithDebInfo/libaxLib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/RelWithDebInfo/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aafmeta2dot;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aafmeta2dot.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EDA9E28B58AD4840B0682175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		F4B38A69082842F0AAF3F7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aaffmtconv";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/libaaflib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aaffmtconv;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aaffmtconv.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		F6C3D6CAA3A34100A70589A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		FE00DB76E8C448B59C8A921F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Utilities/aafviewer/aaf2dot/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafviewer/src/aaf2dot","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/include/ref-api","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/examples2/axLib","$(inherited)");
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG ";
+				OTHER_LDFLAGS = (" -framework CoreFoundation -framework CoreServices -Wl,-search_paths_first -Wl,-headerpad_max_install_names","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaafiid.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RefImpl/MinSizeRel/libaaflib.a","/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Examples2/axLib/MinSizeRel/libaxLib.a","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = aaf2dot;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/aaf2dot.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FE20588C7D8E4DFDBFF9F9F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C0AE83EA478494F9A1D95CA /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F1657B731594159A4B7678F /* Debug */,
+				F6C3D6CAA3A34100A70589A0 /* Release */,
+				0C522422BB9E468FA0250203 /* MinSizeRel */,
+				3ABE6FB72BA04C3EBCF417E9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		147DDF44DA174111B2B84BE7 /* Build configuration list for PBXNativeTarget "aaffmtconv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C4E8E44A3B94A95856FD41A /* Debug */,
+				F4B38A69082842F0AAF3F7DB /* Release */,
+				ACC56403B2B04CAAA3072054 /* MinSizeRel */,
+				E4A5D3E05905473BAFFB42A6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1604068AD7F641A5829BBBF3 /* Build configuration list for PBXNativeTarget "eli2aaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F87BFB6FD3045E1838C32BE /* Debug */,
+				072636C0F87A4AA1856410D6 /* Release */,
+				9F7E5A73631746CBBA650376 /* MinSizeRel */,
+				0FE0EA7EAD964417AF77C376 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		19C3295572824C8D94694385 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECC52BDB26144A08B37B045 /* Debug */,
+				E31E58E0EBFB4C929B2C9ED9 /* Release */,
+				2EAFB10FFF7A49E0948AE2AE /* MinSizeRel */,
+				CFB95C2CC9914FFA8F77531E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2F0922062B6A498B8F39CAD3 /* Build configuration list for PBXNativeTarget "aafextract" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BBB9B8CEEC74382AE69EA14 /* Debug */,
+				BA74D0BB4454444CA5432D3A /* Release */,
+				C8E28D5B8D9E433EA9D482BD /* MinSizeRel */,
+				C10B25F4D4214949B6D48875 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		447B2F559D2045A18239A7EB /* Build configuration list for PBXNativeTarget "aafmeta2dot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BF17A2D1FFA442A8E25722B /* Debug */,
+				C84E11897E4D4B37906DFA70 /* Release */,
+				D74C2B0C335A41668027F0BD /* MinSizeRel */,
+				E7B5ABD5E74C4FD9A2D654BE /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5EA25A7EFD444BEE87439860 /* Build configuration list for PBXNativeTarget "aaf2dot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3DB93C48A4F4445B1D84366 /* Debug */,
+				7C7EA385AA56412B82D9F2A4 /* Release */,
+				FE00DB76E8C448B59C8A921F /* MinSizeRel */,
+				5F4809EFE888425A9A666FE4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7C14FAA424A94EDBBBE964EE /* Build configuration list for PBXAggregateTarget "MakeSDKUtilities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				709284BCEB624D90B9FD40CF /* Debug */,
+				0391F5C7073745979A10A255 /* Release */,
+				A64098A743E445B7A73B33D4 /* MinSizeRel */,
+				E39E7642B35E4C249A88CF84 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8BAFBC3AAC3F4232B2AD596A /* Build configuration list for PBXNativeTarget "aafembed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47CCA709354049BDBB4463BB /* Debug */,
+				3A49B752809E4EA3A37BE2C4 /* Release */,
+				3F4B352F4F3C40B0B079E613 /* MinSizeRel */,
+				63CF23A5601047C0ACF2552A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		97B2AA1F0AD54B65B04F880E /* Build configuration list for PBXProject "Utilities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE9597FAA5E9449595D6781A /* Debug */,
+				FE20588C7D8E4DFDBFF9F9F7 /* Release */,
+				C86087259AC0480F8E1933FF /* MinSizeRel */,
+				A8AF5E6D3B9A422A9B54340F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E3A8F66EBBFF4C65B063BCFD /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA9E28B58AD4840B0682175 /* Debug */,
+				1CD6DF8DC6E94F01BAC1EECB /* Release */,
+				60DB483637BF4E36ABC469B6 /* MinSizeRel */,
+				E3DCAC20ECEB4871B0EA6901 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E15E58872F90422781CC05CA /* Project object */;
+}

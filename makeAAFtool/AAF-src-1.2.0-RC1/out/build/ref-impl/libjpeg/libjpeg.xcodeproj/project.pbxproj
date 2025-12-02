@@ -1,0 +1,1080 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		66E5FADC17BC348BB421F929 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C3A99478E952439EBD85F1E4 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				175544505CD0187D9C3444AA /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		E3FD61174664A23BFF1DF788 /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FE83BB0200DC48049291BF1C /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				003C8D08B0008F35F218E126 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+		F56AFFC068BFC9CE7B30930F /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E71A9CB674324FABA5431446 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				4E0B666D0B3C2B9AD0945DE5 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				9533871AEB7645CAAF4FE484 /* PBXTargetDependency */,
+				889765032D2D4DC79CB1D0F5 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		02B135E9E4DF4B3C9E04A8D7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdsample.c */ = {isa = PBXBuildFile; fileRef = 882B6FB40789453EA4BABE4B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdsample.c */; };
+		0B44FCF36D2D4594A1D9AE87 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdtrans.c */ = {isa = PBXBuildFile; fileRef = 74DB3896950C4B14B564D698 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdtrans.c */; };
+		13E8B1C667584BAEA6EDDEF3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcdctmgr.c */ = {isa = PBXBuildFile; fileRef = 5274FF65D3B949D18DC4909D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcdctmgr.c */; };
+		1463F350676742959F539B0C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctint.c */ = {isa = PBXBuildFile; fileRef = 954EA203823E495FB9766CC3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctint.c */; };
+		146A34D856CD4C97A07144E2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapimin.c */ = {isa = PBXBuildFile; fileRef = 47A50EF1093246459C764AF5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapimin.c */; };
+		18861FF0CB094BE0B6BF1C8E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcparam.c */ = {isa = PBXBuildFile; fileRef = 1E0E490AA0214218977D1EF6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcparam.c */; };
+		1BAD7655D5C04A2888582567 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapistd.c */ = {isa = PBXBuildFile; fileRef = D8FE25641A1F428795826D03 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapistd.c */; };
+		2069A7B8F155454C9159026B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmarker.c */ = {isa = PBXBuildFile; fileRef = 921D6E0E27B0437C8D4D065F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmarker.c */; };
+		26A4FAB1ACF640449207FB8B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemansi.c */ = {isa = PBXBuildFile; fileRef = 9C81214116684756BF50799E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemansi.c */; };
+		2BF473F4438949579841F1E9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctflt.c */ = {isa = PBXBuildFile; fileRef = 4B317CA96D414F4B946675E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctflt.c */; };
+		3098063274D4434BB566342F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmerge.c */ = {isa = PBXBuildFile; fileRef = CCF3EB4598EC43478C972073 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmerge.c */; };
+		32BB7213DEC34648A36C9A67 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcoefct.c */ = {isa = PBXBuildFile; fileRef = 176644AC16014F49865AB235 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcoefct.c */; };
+		385F2F8C19AB4CB386AF2438 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant2.c */ = {isa = PBXBuildFile; fileRef = 9FA3BD894C8F441DAE1A69C0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant2.c */; };
+		39BC91A5C05F406FB155C31C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccoefct.c */ = {isa = PBXBuildFile; fileRef = 2570F53F9DFF4E5695BDE346 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccoefct.c */; };
+		454BF78E12A844D692A2EB97 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmaster.c */ = {isa = PBXBuildFile; fileRef = EF8D59FCE0644C6CBA01C917 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmaster.c */; };
+		45F558C42CD34324A3F63EA0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcolor.c */ = {isa = PBXBuildFile; fileRef = 9C3BB1B69C964045B667A466 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcolor.c */; };
+		498CBB28693E4D55B9616630 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapistd.c */ = {isa = PBXBuildFile; fileRef = BB2B1697802849A189ED07E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapistd.c */; };
+		511E8508BAD54790B3890036 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctfst.c */ = {isa = PBXBuildFile; fileRef = D2F55C1666A34583BF01581C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctfst.c */; };
+		55F5A8A3B9694A26B03C8F3A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jddctmgr.c */ = {isa = PBXBuildFile; fileRef = BDA1BCF400EA47DB940BE0C4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jddctmgr.c */; };
+		592EED53082944DDB53BAD18 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatadst.c */ = {isa = PBXBuildFile; fileRef = E0059E6FD6284351B9915005 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatadst.c */; };
+		70B93739B46A46AC8F5E3119 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdphuff.c */ = {isa = PBXBuildFile; fileRef = 7692E77B824645D59F50054A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdphuff.c */; };
+		7267E09EBE274520BB18DE6D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmaster.c */ = {isa = PBXBuildFile; fileRef = 785CDAAA084749AAA6617B8D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmaster.c */; };
+		7BA4E0265FF54EC885C5833A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmainct.c */ = {isa = PBXBuildFile; fileRef = 4209418779244EA289DF631E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmainct.c */; };
+		7EEF32C18F3B4EE89A0C578D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapimin.c */ = {isa = PBXBuildFile; fileRef = DE8141FD1EBA475E8056FD73 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapimin.c */; };
+		844C0EA338D245B7BF770B7A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctred.c */ = {isa = PBXBuildFile; fileRef = BC5B806B015D474AB2F28707 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctred.c */; };
+		86625F2F61F84BD0991E674F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmarker.c */ = {isa = PBXBuildFile; fileRef = 14C5E3A364BA45F3B52346D9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmarker.c */; };
+		9248DC0F72914094A56697DE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctfst.c */ = {isa = PBXBuildFile; fileRef = D65D33AB6F3E4615B5C0D482 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctfst.c */; };
+		966B12F9AA4E416D8179D13D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctflt.c */ = {isa = PBXBuildFile; fileRef = 3E01A920E0FE4DF4B6073431 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctflt.c */; };
+		A1B7DA50FA0D433DB38CA538 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jutils.c */ = {isa = PBXBuildFile; fileRef = C0FB4ABE3DB04A3992933687 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jutils.c */; };
+		A3890884F26947AA88754FAB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcinit.c */ = {isa = PBXBuildFile; fileRef = E17B7A4281924ACB809217C2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcinit.c */; };
+		A45D76AB96C74AA5A3778C39 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = EBC365BD62FF470095F8721B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/CMakeLists.txt */; };
+		A4D75E2D069F487DAE387971 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmainct.c */ = {isa = PBXBuildFile; fileRef = C1F42102AD974BC9B648AAAB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmainct.c */; };
+		AA84294FC86244F79CC7CE3E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jerror.c */ = {isa = PBXBuildFile; fileRef = 4130C11E3AF7442B83887225 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jerror.c */; };
+		B38994B1B2024B7DB0A399A8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant1.c */ = {isa = PBXBuildFile; fileRef = FDE81DBD9F6344A7B3C4A308 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant1.c */; };
+		B3B7248D66494439A84FC472 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdpostct.c */ = {isa = PBXBuildFile; fileRef = 3D8FBC88DE4A4D46967CB2CA /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdpostct.c */; };
+		C0D5BA5FB451453589D3AE70 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatasrc.c */ = {isa = PBXBuildFile; fileRef = D4A470B1457846389F4D00EC /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatasrc.c */; };
+		C3F3BFF9C85A4E6082CA539C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jchuff.c */ = {isa = PBXBuildFile; fileRef = 681F8D810401453796D9605F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jchuff.c */; };
+		C6451F9D2F924DABA367B493 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccolor.c */ = {isa = PBXBuildFile; fileRef = 77961D7C5364493C97E137C6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccolor.c */; };
+		C9BA0B3AD11744A7AAFA476F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemmgr.c */ = {isa = PBXBuildFile; fileRef = 526959E5955C42CDB556C8DB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemmgr.c */; };
+		D04F06450C674643872C7458 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcomapi.c */ = {isa = PBXBuildFile; fileRef = A2E099C5538B4A5C9D22BAEE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcomapi.c */; };
+		DED41EC1F3954962B10E27AF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcphuff.c */ = {isa = PBXBuildFile; fileRef = AD9B784F8F7C40EE871D61C9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcphuff.c */; };
+		E7BD6E89E7034898A39D0AEA /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctint.c */ = {isa = PBXBuildFile; fileRef = D61B3FFEB914495595F668FD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctint.c */; };
+		E8CC598B805E4F63AE494565 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcsample.c */ = {isa = PBXBuildFile; fileRef = B02B18BA441B4EF7B13A4A48 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcsample.c */; };
+		EE02B91E60D14789BE398DBF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdinput.c */ = {isa = PBXBuildFile; fileRef = 5711E6BE685F4B0E9AD0B03C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdinput.c */; };
+		F22F44AB4A604F338E6267ED /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdhuff.c */ = {isa = PBXBuildFile; fileRef = 80D4C91751104B529906EDF6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdhuff.c */; };
+		F88D7C7E339644AEB148F11B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcprepct.c */ = {isa = PBXBuildFile; fileRef = 2EF827E213D647259E18DCEB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcprepct.c */; };
+		FB0CEEF24CA447D6AEFED783 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jctrans.c */ = {isa = PBXBuildFile; fileRef = 71057BCFB76B44C082AB1976 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jctrans.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		38242F49A6104283AC88DACF /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		6434CAB7675A48FDA0392323 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		D11D41EDCBA744EF80EB5238 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		E2DC55666868453E8916146A /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		12718B973A9642B08E78D60E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 688A4A20BE634B16BC89C3C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66E5FADC17BC348BB421F929;
+			remoteInfo = ZERO_CHECK;
+		};
+		5410216CD32A4A83ADBD3994 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 688A4A20BE634B16BC89C3C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50A397290C965353EA7C49FE;
+			remoteInfo = libjpeg;
+		};
+		6449619C30874BEE9CA7070D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 688A4A20BE634B16BC89C3C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66E5FADC17BC348BB421F929;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14C5E3A364BA45F3B52346D9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmarker.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcmarker.c; path = jcmarker.c; sourceTree = SOURCE_ROOT; };
+		176644AC16014F49865AB235 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcoefct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdcoefct.c; path = jdcoefct.c; sourceTree = SOURCE_ROOT; };
+		1E0E490AA0214218977D1EF6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcparam.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcparam.c; path = jcparam.c; sourceTree = SOURCE_ROOT; };
+		2570F53F9DFF4E5695BDE346 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccoefct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jccoefct.c; path = jccoefct.c; sourceTree = SOURCE_ROOT; };
+		2EF827E213D647259E18DCEB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcprepct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcprepct.c; path = jcprepct.c; sourceTree = SOURCE_ROOT; };
+		370D73287E594BC6931835D0 /* libjpeg */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libjpeg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D8FBC88DE4A4D46967CB2CA /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdpostct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdpostct.c; path = jdpostct.c; sourceTree = SOURCE_ROOT; };
+		3E01A920E0FE4DF4B6073431 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctflt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jfdctflt.c; path = jfdctflt.c; sourceTree = SOURCE_ROOT; };
+		4130C11E3AF7442B83887225 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jerror.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jerror.c; path = jerror.c; sourceTree = SOURCE_ROOT; };
+		4209418779244EA289DF631E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmainct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdmainct.c; path = jdmainct.c; sourceTree = SOURCE_ROOT; };
+		47A50EF1093246459C764AF5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapimin.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcapimin.c; path = jcapimin.c; sourceTree = SOURCE_ROOT; };
+		4B317CA96D414F4B946675E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctflt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jidctflt.c; path = jidctflt.c; sourceTree = SOURCE_ROOT; };
+		526959E5955C42CDB556C8DB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemmgr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jmemmgr.c; path = jmemmgr.c; sourceTree = SOURCE_ROOT; };
+		5274FF65D3B949D18DC4909D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcdctmgr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcdctmgr.c; path = jcdctmgr.c; sourceTree = SOURCE_ROOT; };
+		5711E6BE685F4B0E9AD0B03C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdinput.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdinput.c; path = jdinput.c; sourceTree = SOURCE_ROOT; };
+		681F8D810401453796D9605F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jchuff.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jchuff.c; path = jchuff.c; sourceTree = SOURCE_ROOT; };
+		71057BCFB76B44C082AB1976 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jctrans.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jctrans.c; path = jctrans.c; sourceTree = SOURCE_ROOT; };
+		74DB3896950C4B14B564D698 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdtrans.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdtrans.c; path = jdtrans.c; sourceTree = SOURCE_ROOT; };
+		7692E77B824645D59F50054A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdphuff.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdphuff.c; path = jdphuff.c; sourceTree = SOURCE_ROOT; };
+		77961D7C5364493C97E137C6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccolor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jccolor.c; path = jccolor.c; sourceTree = SOURCE_ROOT; };
+		785CDAAA084749AAA6617B8D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmaster.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcmaster.c; path = jcmaster.c; sourceTree = SOURCE_ROOT; };
+		80D4C91751104B529906EDF6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdhuff.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdhuff.c; path = jdhuff.c; sourceTree = SOURCE_ROOT; };
+		882B6FB40789453EA4BABE4B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdsample.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdsample.c; path = jdsample.c; sourceTree = SOURCE_ROOT; };
+		921D6E0E27B0437C8D4D065F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmarker.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdmarker.c; path = jdmarker.c; sourceTree = SOURCE_ROOT; };
+		954EA203823E495FB9766CC3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctint.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jidctint.c; path = jidctint.c; sourceTree = SOURCE_ROOT; };
+		9C3BB1B69C964045B667A466 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcolor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdcolor.c; path = jdcolor.c; sourceTree = SOURCE_ROOT; };
+		9C81214116684756BF50799E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemansi.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jmemansi.c; path = jmemansi.c; sourceTree = SOURCE_ROOT; };
+		9FA3BD894C8F441DAE1A69C0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jquant2.c; path = jquant2.c; sourceTree = SOURCE_ROOT; };
+		A2E099C5538B4A5C9D22BAEE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcomapi.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcomapi.c; path = jcomapi.c; sourceTree = SOURCE_ROOT; };
+		AD9B784F8F7C40EE871D61C9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcphuff.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcphuff.c; path = jcphuff.c; sourceTree = SOURCE_ROOT; };
+		B02B18BA441B4EF7B13A4A48 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcsample.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcsample.c; path = jcsample.c; sourceTree = SOURCE_ROOT; };
+		BB2B1697802849A189ED07E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapistd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdapistd.c; path = jdapistd.c; sourceTree = SOURCE_ROOT; };
+		BC5B806B015D474AB2F28707 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctred.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jidctred.c; path = jidctred.c; sourceTree = SOURCE_ROOT; };
+		BDA1BCF400EA47DB940BE0C4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jddctmgr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jddctmgr.c; path = jddctmgr.c; sourceTree = SOURCE_ROOT; };
+		C0FB4ABE3DB04A3992933687 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jutils.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jutils.c; path = jutils.c; sourceTree = SOURCE_ROOT; };
+		C1F42102AD974BC9B648AAAB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmainct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcmainct.c; path = jcmainct.c; sourceTree = SOURCE_ROOT; };
+		CCF3EB4598EC43478C972073 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmerge.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdmerge.c; path = jdmerge.c; sourceTree = SOURCE_ROOT; };
+		D2F55C1666A34583BF01581C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctfst.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jfdctfst.c; path = jfdctfst.c; sourceTree = SOURCE_ROOT; };
+		D4A470B1457846389F4D00EC /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatasrc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdatasrc.c; path = jdatasrc.c; sourceTree = SOURCE_ROOT; };
+		D61B3FFEB914495595F668FD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctint.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jfdctint.c; path = jfdctint.c; sourceTree = SOURCE_ROOT; };
+		D65D33AB6F3E4615B5C0D482 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctfst.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jidctfst.c; path = jidctfst.c; sourceTree = SOURCE_ROOT; };
+		D8FE25641A1F428795826D03 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapistd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcapistd.c; path = jcapistd.c; sourceTree = SOURCE_ROOT; };
+		DD73E2F0692D44B083C4A908 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DE8141FD1EBA475E8056FD73 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapimin.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdapimin.c; path = jdapimin.c; sourceTree = SOURCE_ROOT; };
+		E0059E6FD6284351B9915005 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatadst.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdatadst.c; path = jdatadst.c; sourceTree = SOURCE_ROOT; };
+		E17B7A4281924ACB809217C2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcinit.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcinit.c; path = jcinit.c; sourceTree = SOURCE_ROOT; };
+		EBC365BD62FF470095F8721B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		EF8D59FCE0644C6CBA01C917 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmaster.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdmaster.c; path = jdmaster.c; sourceTree = SOURCE_ROOT; };
+		FDE81DBD9F6344A7B3C4A308 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant1.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jquant1.c; path = jquant1.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB69FC690DAF4C2D85304F63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F13957084674FF9B3B9480C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				47A50EF1093246459C764AF5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapimin.c */,
+				D8FE25641A1F428795826D03 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapistd.c */,
+				2570F53F9DFF4E5695BDE346 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccoefct.c */,
+				77961D7C5364493C97E137C6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccolor.c */,
+				5274FF65D3B949D18DC4909D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcdctmgr.c */,
+				681F8D810401453796D9605F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jchuff.c */,
+				E17B7A4281924ACB809217C2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcinit.c */,
+				C1F42102AD974BC9B648AAAB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmainct.c */,
+				14C5E3A364BA45F3B52346D9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmarker.c */,
+				785CDAAA084749AAA6617B8D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmaster.c */,
+				A2E099C5538B4A5C9D22BAEE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcomapi.c */,
+				1E0E490AA0214218977D1EF6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcparam.c */,
+				AD9B784F8F7C40EE871D61C9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcphuff.c */,
+				2EF827E213D647259E18DCEB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcprepct.c */,
+				B02B18BA441B4EF7B13A4A48 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcsample.c */,
+				71057BCFB76B44C082AB1976 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jctrans.c */,
+				DE8141FD1EBA475E8056FD73 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapimin.c */,
+				BB2B1697802849A189ED07E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapistd.c */,
+				E0059E6FD6284351B9915005 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatadst.c */,
+				D4A470B1457846389F4D00EC /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatasrc.c */,
+				176644AC16014F49865AB235 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcoefct.c */,
+				9C3BB1B69C964045B667A466 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcolor.c */,
+				BDA1BCF400EA47DB940BE0C4 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jddctmgr.c */,
+				80D4C91751104B529906EDF6 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdhuff.c */,
+				5711E6BE685F4B0E9AD0B03C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdinput.c */,
+				4209418779244EA289DF631E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmainct.c */,
+				921D6E0E27B0437C8D4D065F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmarker.c */,
+				EF8D59FCE0644C6CBA01C917 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmaster.c */,
+				CCF3EB4598EC43478C972073 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmerge.c */,
+				7692E77B824645D59F50054A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdphuff.c */,
+				3D8FBC88DE4A4D46967CB2CA /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdpostct.c */,
+				882B6FB40789453EA4BABE4B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdsample.c */,
+				74DB3896950C4B14B564D698 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdtrans.c */,
+				4130C11E3AF7442B83887225 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jerror.c */,
+				3E01A920E0FE4DF4B6073431 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctflt.c */,
+				D2F55C1666A34583BF01581C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctfst.c */,
+				D61B3FFEB914495595F668FD /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctint.c */,
+				4B317CA96D414F4B946675E5 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctflt.c */,
+				D65D33AB6F3E4615B5C0D482 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctfst.c */,
+				954EA203823E495FB9766CC3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctint.c */,
+				BC5B806B015D474AB2F28707 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctred.c */,
+				9C81214116684756BF50799E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemansi.c */,
+				526959E5955C42CDB556C8DB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemmgr.c */,
+				FDE81DBD9F6344A7B3C4A308 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant1.c */,
+				9FA3BD894C8F441DAE1A69C0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant2.c */,
+				C0FB4ABE3DB04A3992933687 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jutils.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		2A8147E8C5F149D08A46D364 /* libjpeg */ = {
+			isa = PBXGroup;
+			children = (
+				1F13957084674FF9B3B9480C /* Source Files */,
+				EBC365BD62FF470095F8721B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/CMakeLists.txt */,
+			);
+			name = libjpeg;
+			sourceTree = "<group>";
+		};
+		57BFF2B120BF466382A1E97E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				370D73287E594BC6931835D0 /* libjpeg */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61F89AB2E5D940D8A27931D6 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				667CAAF5F62F4DB1B0E3A1D6 /* CMake Rules */,
+				DD73E2F0692D44B083C4A908 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		667CAAF5F62F4DB1B0E3A1D6 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		7C3DF53BA476475199953B87 = {
+			isa = PBXGroup;
+			children = (
+				61F89AB2E5D940D8A27931D6 /* ALL_BUILD */,
+				2A8147E8C5F149D08A46D364 /* libjpeg */,
+				57BFF2B120BF466382A1E97E /* Products */,
+				B379CF19B87D4B059C4F1C27 /* Frameworks */,
+				8557C57E799D421EB48332E5 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		8557C57E799D421EB48332E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B379CF19B87D4B059C4F1C27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50A397290C965353EA7C49FE /* libjpeg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 251B1E27FEB940DBA5FB0EA3 /* Build configuration list for PBXNativeTarget "libjpeg" */;
+			buildPhases = (
+				343982919B33488A81C8C1D4 /* Sources */,
+				EB69FC690DAF4C2D85304F63 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				214064D245B042A182E8C363 /* PBXTargetDependency */,
+			);
+			name = libjpeg;
+			productName = libjpeg;
+			productReference = 370D73287E594BC6931835D0 /* libjpeg */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		688A4A20BE634B16BC89C3C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2610;
+			};
+			buildConfigurationList = 92B5417E0A4B44A9B5EB0803 /* Build configuration list for PBXProject "libjpeg" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				6434CAB7675A48FDA0392323 /* Debug */,
+				E2DC55666868453E8916146A /* Release */,
+				38242F49A6104283AC88DACF /* MinSizeRel */,
+				D11D41EDCBA744EF80EB5238 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 7C3DF53BA476475199953B87;
+			projectDirPath = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg";
+			projectRoot = "";
+			targets = (
+				F56AFFC068BFC9CE7B30930F /* ALL_BUILD */,
+				50A397290C965353EA7C49FE /* libjpeg */,
+				E3FD61174664A23BFF1DF788 /* RUN_TESTS */,
+				66E5FADC17BC348BB421F929 /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		003C8D08B0008F35F218E126 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  /opt/homebrew/bin/ctest -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  /opt/homebrew/bin/ctest -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  /opt/homebrew/bin/ctest -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  /opt/homebrew/bin/ctest -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		175544505CD0187D9C3444AA /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  make -f /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  make -f /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  make -f /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  make -f /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		4E0B666D0B3C2B9AD0945DE5 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/ref-impl/libjpeg
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		910A41151295C5F9742C25BD = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		343982919B33488A81C8C1D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146A34D856CD4C97A07144E2 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapimin.c */,
+				1BAD7655D5C04A2888582567 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcapistd.c */,
+				39BC91A5C05F406FB155C31C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccoefct.c */,
+				C6451F9D2F924DABA367B493 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jccolor.c */,
+				13E8B1C667584BAEA6EDDEF3 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcdctmgr.c */,
+				C3F3BFF9C85A4E6082CA539C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jchuff.c */,
+				A3890884F26947AA88754FAB /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcinit.c */,
+				A4D75E2D069F487DAE387971 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmainct.c */,
+				86625F2F61F84BD0991E674F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmarker.c */,
+				7267E09EBE274520BB18DE6D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcmaster.c */,
+				D04F06450C674643872C7458 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcomapi.c */,
+				18861FF0CB094BE0B6BF1C8E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcparam.c */,
+				DED41EC1F3954962B10E27AF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcphuff.c */,
+				F88D7C7E339644AEB148F11B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcprepct.c */,
+				E8CC598B805E4F63AE494565 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jcsample.c */,
+				FB0CEEF24CA447D6AEFED783 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jctrans.c */,
+				7EEF32C18F3B4EE89A0C578D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapimin.c */,
+				498CBB28693E4D55B9616630 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdapistd.c */,
+				592EED53082944DDB53BAD18 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatadst.c */,
+				C0D5BA5FB451453589D3AE70 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdatasrc.c */,
+				32BB7213DEC34648A36C9A67 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcoefct.c */,
+				45F558C42CD34324A3F63EA0 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdcolor.c */,
+				55F5A8A3B9694A26B03C8F3A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jddctmgr.c */,
+				F22F44AB4A604F338E6267ED /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdhuff.c */,
+				EE02B91E60D14789BE398DBF /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdinput.c */,
+				7BA4E0265FF54EC885C5833A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmainct.c */,
+				2069A7B8F155454C9159026B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmarker.c */,
+				454BF78E12A844D692A2EB97 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmaster.c */,
+				3098063274D4434BB566342F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdmerge.c */,
+				70B93739B46A46AC8F5E3119 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdphuff.c */,
+				B3B7248D66494439A84FC472 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdpostct.c */,
+				02B135E9E4DF4B3C9E04A8D7 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdsample.c */,
+				0B44FCF36D2D4594A1D9AE87 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jdtrans.c */,
+				AA84294FC86244F79CC7CE3E /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jerror.c */,
+				966B12F9AA4E416D8179D13D /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctflt.c */,
+				511E8508BAD54790B3890036 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctfst.c */,
+				E7BD6E89E7034898A39D0AEA /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jfdctint.c */,
+				2BF473F4438949579841F1E9 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctflt.c */,
+				9248DC0F72914094A56697DE /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctfst.c */,
+				1463F350676742959F539B0C /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctint.c */,
+				844C0EA338D245B7BF770B7A /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jidctred.c */,
+				26A4FAB1ACF640449207FB8B /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemansi.c */,
+				C9BA0B3AD11744A7AAFA476F /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jmemmgr.c */,
+				B38994B1B2024B7DB0A399A8 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant1.c */,
+				385F2F8C19AB4CB386AF2438 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jquant2.c */,
+				A1B7DA50FA0D433DB38CA538 /* /Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg/jutils.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		214064D245B042A182E8C363 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66E5FADC17BC348BB421F929 /* ZERO_CHECK */;
+			targetProxy = 6449619C30874BEE9CA7070D /* PBXContainerItemProxy */;
+		};
+		889765032D2D4DC79CB1D0F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50A397290C965353EA7C49FE /* libjpeg */;
+			targetProxy = 5410216CD32A4A83ADBD3994 /* PBXContainerItemProxy */;
+		};
+		9533871AEB7645CAAF4FE484 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66E5FADC17BC348BB421F929 /* ZERO_CHECK */;
+			targetProxy = 12718B973A9642B08E78D60E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		025B439F6BC44450BE4436DC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build";
+			};
+			name = MinSizeRel;
+		};
+		330DFFEE2E5A4A918E040CAF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3D572CA4BD57418494968D16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		41F721A83A414375AFFF4B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		4487689371794995AA035F21 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		47A5527B980D4BE1A48850CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		49C768C364664579B26F0337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		4BDBD6C3BE0C477A9929E6A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build";
+			};
+			name = Debug;
+		};
+		4CBE9B57FBB24C278960F61A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build";
+			};
+			name = Release;
+		};
+		69230AA3A5C34ACE97B39615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("   ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = (" -framework CoreFoundation -framework CoreServices");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = jpeg;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/libjpeg.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		854FF2254704433B8F6CBD59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		9070B6EC684F4B968754203A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		96AE2730955947B985EB5DD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("    -DNDEBUG ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = (" -framework CoreFoundation -framework CoreServices");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = jpeg;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/libjpeg.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		A1313BD14BDD4F96AB99C54D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("    -DNDEBUG ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = (" -framework CoreFoundation -framework CoreServices");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = jpeg;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/libjpeg.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B301EB53B1DA4DE080DC3E24 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B36256FE13A6491CA524E264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		B9674BCC5D794BA0B0FD6809 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CE19E2ABB31F45DD9DD33B3C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D4202136BF8240DE81CC6B5C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		FD693F9A5F8646719B0E007E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/target/clang12-arm64/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/ref-impl/libjpeg","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("       -DNDEBUG ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = (" -framework CoreFoundation -framework CoreServices");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = jpeg;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/out/build/build/libjpeg.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		251B1E27FEB940DBA5FB0EA3 /* Build configuration list for PBXNativeTarget "libjpeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69230AA3A5C34ACE97B39615 /* Debug */,
+				96AE2730955947B985EB5DD6 /* Release */,
+				A1313BD14BDD4F96AB99C54D /* MinSizeRel */,
+				FD693F9A5F8646719B0E007E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		92B5417E0A4B44A9B5EB0803 /* Build configuration list for PBXProject "libjpeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BDBD6C3BE0C477A9929E6A3 /* Debug */,
+				4CBE9B57FBB24C278960F61A /* Release */,
+				025B439F6BC44450BE4436DC /* MinSizeRel */,
+				D4202136BF8240DE81CC6B5C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C3A99478E952439EBD85F1E4 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B36256FE13A6491CA524E264 /* Debug */,
+				3D572CA4BD57418494968D16 /* Release */,
+				CE19E2ABB31F45DD9DD33B3C /* MinSizeRel */,
+				4487689371794995AA035F21 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E71A9CB674324FABA5431446 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41F721A83A414375AFFF4B9D /* Debug */,
+				49C768C364664579B26F0337 /* Release */,
+				9070B6EC684F4B968754203A /* MinSizeRel */,
+				330DFFEE2E5A4A918E040CAF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FE83BB0200DC48049291BF1C /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A5527B980D4BE1A48850CF /* Debug */,
+				854FF2254704433B8F6CBD59 /* Release */,
+				B301EB53B1DA4DE080DC3E24 /* MinSizeRel */,
+				B9674BCC5D794BA0B0FD6809 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 688A4A20BE634B16BC89C3C2 /* Project object */;
+}

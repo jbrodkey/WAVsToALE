@@ -3,13 +3,17 @@
 
 echo "Building WAVsToALE..."
 
-# Check if UCS CSV exists
-if [ -f "UCS_v8.2.1_Full_List.csv" ]; then
-    echo "Found UCS CSV file, including in build..."
-    DATA_FLAG="--add-data UCS_v8.2.1_Full_List.csv:."
+# Check if UCS CSV exists (prefer data/)
+if [ -f "data/UCS_v8.2.1_Full_List.csv" ]; then
+    echo "Found UCS CSV in data/, including in build..."
+    DATA_FLAG="--add-data data/UCS_v8.2.1_Full_List.csv:data"
+elif ls data/*.csv 1> /dev/null 2>&1; then
+    CSV_FILE=$(ls data/*.csv | head -1)
+    echo "Found CSV file in data/: $CSV_FILE, including in build..."
+    DATA_FLAG="--add-data $CSV_FILE:data"
 elif ls *.csv 1> /dev/null 2>&1; then
     CSV_FILE=$(ls *.csv | head -1)
-    echo "Found CSV file: $CSV_FILE, including in build..."
+    echo "Found CSV file in project root: $CSV_FILE, including in build..."
     DATA_FLAG="--add-data $CSV_FILE:."
 else
     echo "No UCS CSV found, building without..."

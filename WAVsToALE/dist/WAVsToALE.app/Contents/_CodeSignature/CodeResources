@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Resources/UCS_v8.2.1_Full_List.csv</key>
-		<data>
-		GDAaFshoPTqOJ95o3l3qc/t4hNg=
-		</data>
 		<key>Resources/WAVsToALE.icns</key>
 		<data>
 		Zoby8M19aTmflbH3LDtOMeZaouQ=
@@ -766,7 +762,11 @@
 		</data>
 		<key>Resources/base_library.zip</key>
 		<data>
-		JD5IgPn7Nq9H0eYCzB0wCGUtu1c=
+		mGtsuXrk01HcH8jopIm5I+52DVU=
+		</data>
+		<key>Resources/data/UCS_v8.2.1_Full_List.csv</key>
+		<data>
+		GDAaFshoPTqOJ95o3l3qc/t4hNg=
 		</data>
 		<key>Resources/tcl8/8.4/platform-1.0.19.tm</key>
 		<data>
@@ -823,11 +823,6 @@
 			<key>requirement</key>
 			<string>cdhash H"303356c4b9ec458e9154cf10d97a2536f683bac9"</string>
 		</dict>
-		<key>Frameworks/UCS_v8.2.1_Full_List.csv</key>
-		<dict>
-			<key>symlink</key>
-			<string>../Resources/UCS_v8.2.1_Full_List.csv</string>
-		</dict>
 		<key>Frameworks/_tcl_data</key>
 		<dict>
 			<key>symlink</key>
@@ -842,6 +837,11 @@
 		<dict>
 			<key>symlink</key>
 			<string>../Resources/base_library.zip</string>
+		</dict>
+		<key>Frameworks/data</key>
+		<dict>
+			<key>symlink</key>
+			<string>../Resources/data</string>
 		</dict>
 		<key>Frameworks/libcrypto.3.dylib</key>
 		<dict>
@@ -1349,13 +1349,6 @@
 		<dict>
 			<key>symlink</key>
 			<string>../Frameworks/Tk</string>
-		</dict>
-		<key>Resources/UCS_v8.2.1_Full_List.csv</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xAuZNc/ejg3ZCoLgfce/ARSLlJG17b+5LyLr8dvgTxs=
-			</data>
 		</dict>
 		<key>Resources/WAVsToALE.icns</key>
 		<dict>
@@ -2684,7 +2677,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O6Ut5vXthi9MCUt/HI04sTv6PLQvI/1nTxC6SG9TieY=
+			gMRqmYVpezt9x06ByDkiOWnFTPP/4fzBGnin7Kpn6pI=
+			</data>
+		</dict>
+		<key>Resources/data/UCS_v8.2.1_Full_List.csv</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xAuZNc/ejg3ZCoLgfce/ARSLlJG17b+5LyLr8dvgTxs=
 			</data>
 		</dict>
 		<key>Resources/libcrypto.3.dylib</key>

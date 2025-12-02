@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/propertyId.dir/headergen_headerGenUtils_propertyId.cpp.o CMakeFiles/propertyId.dir/headergen_propertyId.cpp.o -o propertyId

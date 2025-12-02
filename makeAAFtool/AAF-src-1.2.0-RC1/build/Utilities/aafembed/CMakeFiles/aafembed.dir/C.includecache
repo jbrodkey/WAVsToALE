@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.c
+config.h
+/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/config.h
+avilib.h
+/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.h
+io.h
+-
+stdlib.h
+-
+strings.h
+-
+unistd.h
+-
+
+/Users/jasonbrodkey/Documents/SFX/pythonScripts/makeAAFtool/AAF-src-1.2.0-RC1/Utilities/aafembed/avilib.h
+sys/types.h
+-
+sys/stat.h
+-
+stdio.h
+-
+fcntl.h
+-
+stdint.h
+-
+limits.h
+-
+stdlib.h
+-
+string.h
+-
+errno.h
+-
+

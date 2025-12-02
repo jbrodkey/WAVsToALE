@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/aafembed.dir/aafembed.cpp.o CMakeFiles/aafembed.dir/avilib.c.o -o aafembed-1.2.0  ../../RefImpl/libaafiid.a ../../RefImpl/libaaflib.a

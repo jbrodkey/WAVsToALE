@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/classDefUid.dir/headergen_headerGenUtils_classDefUid.cpp.o CMakeFiles/classDefUid.dir/headergen_classDefUid.cpp.o -o classDefUid

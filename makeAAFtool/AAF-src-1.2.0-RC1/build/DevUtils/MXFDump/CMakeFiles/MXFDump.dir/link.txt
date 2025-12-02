@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/MXFDump.dir/MXFDump.cpp.o -o MXFDump-1.2.0

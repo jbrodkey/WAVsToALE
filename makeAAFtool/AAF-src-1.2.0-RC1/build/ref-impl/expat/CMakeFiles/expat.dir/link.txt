@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../RefImpl/libexpat.a CMakeFiles/expat.dir/xmlparse.c.o CMakeFiles/expat.dir/xmlrole.c.o CMakeFiles/expat.dir/xmltok.c.o
+/usr/bin/ranlib ../../RefImpl/libexpat.a

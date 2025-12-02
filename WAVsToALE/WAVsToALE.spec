@@ -5,7 +5,7 @@ a = Analysis(
     ['wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py'],
     pathex=[],
     binaries=[],
-    datas=[('UCS_v8.2.1_Full_List.csv', '.')],
+    datas=[('data/UCS_v8.2.1_Full_List.csv', 'data')],
     hiddenimports=['tkinter', 'tkinter.ttk', 'tkinter.filedialog', 'tkinter.messagebox', 'tkinter.font', 'tkinter.scrolledtext'],
     hookspath=[],
     hooksconfig={},
