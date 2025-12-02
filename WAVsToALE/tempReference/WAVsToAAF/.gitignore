@@ -1,0 +1,51 @@
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+
+# DMG packaging (staging + outputs)
+DMG_/
+DMG_Contents_STAGING/
+*.dmg
+
+# PyInstaller internals and packaging byproducts
+*.pkg
+*.toc
+base_library.zip
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+
+# macOS metadata
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test data and archives
+*.zip
+embedded_test_aafs.zip
+
+# Alternative/unused tools
+AAFOTIOConverter
+wav_to_otio_aaf.py
+aaf_embedder/

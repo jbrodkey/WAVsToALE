@@ -22,7 +22,7 @@ Copyright (c) 2025 Jason Brodkey. All rights reserved.
 
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import os
 import csv
@@ -88,7 +88,14 @@ def resource_path(relative_path):
     return os.path.join(base, relative_path)
 
 def load_ucs_mapping(csv_file_path):
-    """Load UCS mapping from a CSV file."""
+    """Load UCS mapping from a CSV file.
+
+    Returns a dict keyed by UCS ID (CatID/ID/CatShort) with fields:
+    - category
+    - subcategory
+    - full_name (Category + ' ' + Subcategory)
+    - keywords (list)
+    """
     ucs_mapping = {}
     try:
         with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
@@ -102,34 +109,133 @@ def load_ucs_mapping(csv_file_path):
             lower_map = {h.lower(): h for h in headers}
 
             # Required keys (case-insensitive)
-            required = ['catid', 'category', 'subcategory']
+            required = ['category', 'subcategory']
             if not all(k in lower_map for k in required):
                 print(f"Error: CSV file is missing required columns (CatID, Category, Subcategory). Found headers: {headers}")
                 return {}
 
             # Use the actual header names when reading rows to preserve original casing
-            catid_h = lower_map['catid']
+            # Accept multiple ID header variants
+            catid_h = lower_map.get('catid') or lower_map.get('id') or lower_map.get('catshort')
             category_h = lower_map['category']
             subcategory_h = lower_map['subcategory']
+            # Optional text fields
+            expl_h = lower_map.get('explanations') or lower_map.get('description')
+            keywords_h = lower_map.get('synonyms - comma separated') or lower_map.get('keywords')
 
             for row in reader:
-                cat_id = (row.get(catid_h) or '').strip().upper()
+                cat_id = (row.get(catid_h) or '').strip()
                 category = (row.get(category_h) or 'Unknown').strip()
                 subcategory = (row.get(subcategory_h) or 'Unknown').strip()
+                explanations = (row.get(expl_h) or '').strip() if expl_h else ''
+                keywords_raw = (row.get(keywords_h) or '').strip() if keywords_h else ''
+                keywords = [k.strip() for k in keywords_raw.split(',') if k.strip()]
                 if cat_id:
-                    ucs_mapping[cat_id] = (category, subcategory)
+                    key = cat_id.upper()
+                    full_name = f"{category} {subcategory}".strip()
+                    ucs_mapping[key] = {
+                        'category': category,
+                        'subcategory': subcategory,
+                        'full_name': full_name,
+                        'explanations': explanations,
+                        'keywords': keywords,
+                    }
     except Exception as e:
         print(f"Error loading UCS mapping from CSV: {e}")
     return ucs_mapping
 
 def extract_ucs_category(filename):
-    """Extract CatID from filename and map to Category and Subcategory."""
-    # Assume CatID is the first part of the filename before an underscore
-    cat_id = filename.split('_')[0].upper()
-    category, subcategory = UCS_MAPPING.get(cat_id, ("", ""))  # Return empty strings if CatID is not found
-    return category, subcategory
+    """Extract CatID from filename and map to Category and Subcategory.
 
-def parse_wav_metadata(wav_file_path, fps: float = 24.0):
+    Checks for exact UCS ID prefix before the first underscore.
+    """
+    cat_id = filename.split('_')[0].upper()
+    info = UCS_MAPPING.get(cat_id)
+    if info:
+        return info.get('category', ''), info.get('subcategory', '')
+    return "", ""
+
+def _preprocess_text(text: str) -> str:
+    s = (text or '').lower()
+    s = s.replace('.wav', '').replace('.wave', '')
+    for ch in ['_', '-', '.', '/', '\\']:
+        s = s.replace(ch, ' ')
+    return ' '.join(s.split())
+
+def _score_entry(text_words: set[str], text_str: str, entry: dict) -> float:
+    score = 0.0
+    full_name = (entry.get('full_name') or '').lower()
+    category = (entry.get('category') or '').lower()
+    subcategory = (entry.get('subcategory') or '').lower()
+    keywords = [k.lower() for k in (entry.get('keywords') or [])]
+
+    if full_name and full_name in text_str:
+        score += 10.0
+    if category and category in text_str:
+        score += 5.0
+    if subcategory and subcategory in text_str:
+        score += 7.0
+    for kw in keywords:
+        if kw and kw in text_str:
+            score += 3.0
+
+    # Word-level matches
+    name_words = set(w for w in full_name.split() if len(w) > 2)
+    cat_words = set(w for w in category.split() if len(w) > 2)
+    sub_words = set(w for w in subcategory.split() if len(w) > 2)
+    for w in text_words:
+        if len(w) > 2:
+            if w in name_words:
+                score += 2.0
+            elif w in cat_words:
+                score += 1.5
+            elif w in sub_words:
+                score += 1.5
+    # Partial matches
+    long_text = [w for w in text_words if len(w) > 3]
+    long_name = [w for w in name_words if len(w) > 3]
+    for tw in long_text:
+        for nw in long_name:
+            if tw in nw or nw in tw:
+                score += 0.5
+    return score
+
+def best_guess_ucs(text: str, min_confidence_threshold: float = 0.0, low_confidence_threshold: float = 25.0):
+    """Return best-guess UCS match dict using the loaded UCS mapping.
+
+    Returns dict with keys: category, subcategory, ucs_id, score, alternatives(list of ids)
+    or None if no viable match.
+    """
+    if not UCS_MAPPING:
+        return None
+    t = _preprocess_text(text)
+    if not t:
+        return None
+    words = set(t.split())
+    scored = []
+    for ucs_id, info in UCS_MAPPING.items():
+        s = _score_entry(words, t, info)
+        if s > 0.0:
+            scored.append((s, ucs_id, info))
+    if not scored:
+        return None
+    scored.sort(key=lambda x: x[0], reverse=True)
+    best_score, best_id, best_info = scored[0]
+    if best_score < min_confidence_threshold:
+        return None
+    # Alternatives within 70% of best
+    alt_threshold = best_score * 0.7
+    alternatives = [eid for s, eid, _ in scored[1:6] if s >= alt_threshold]
+    return {
+        'category': best_info.get('category', ''),
+        'subcategory': best_info.get('subcategory', ''),
+        'ucs_id': best_id,
+        'score': best_score,
+        'alternatives': alternatives,
+        'low_confidence': best_score < low_confidence_threshold,
+    }
+
+def parse_wav_metadata(wav_file_path, fps: float = 24.0, allow_ucs_guess: bool = True, min_confidence_threshold: float = 0.0, low_confidence_threshold: float = 25.0):
     """Extract metadata from a WAV file, including BEXT, XML, and INFO chunks.
 
     fps may be a non-integer (e.g. 23.976, 29.97) and is used to compute the
@@ -187,6 +293,26 @@ def parse_wav_metadata(wav_file_path, fps: float = 24.0):
         category, subcategory = extract_ucs_category(filename)
         metadata['Category'] = category
         metadata['Subcategory'] = subcategory
+
+        # Best-guess UCS if missing and allowed
+        if allow_ucs_guess and (not category or not subcategory):
+            # Combine available text sources
+            text_parts = [
+                filename,
+                metadata.get('Description', ''),
+                ' '.join(str(v) for k, v in metadata.items() if isinstance(v, str)),
+            ]
+            guess = best_guess_ucs(' '.join(text_parts), min_confidence_threshold, low_confidence_threshold)
+            if guess:
+                if not category:
+                    metadata['Category'] = guess['category']
+                if not subcategory:
+                    metadata['Subcategory'] = guess['subcategory']
+                metadata['UCS_ID'] = guess['ucs_id']
+                metadata['UCS_Match_Score'] = f"{guess['score']:.1f}"
+                if guess.get('alternatives'):
+                    metadata['UCS_Alternatives'] = ','.join(guess['alternatives'])
+                metadata['UCS_Low_Confidence'] = 'Yes' if guess.get('low_confidence') else 'No'
 
     except EOFError as e:
         # Record and skip files with EOF or other read errors
@@ -432,7 +558,8 @@ def create_ale_file(metadata_list, output_file_path, fps=24):
         print(f"Error creating ALE file: {e}")
         return None
 
-def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print, cancel_event: threading.Event | None = None, output_paths: list | None = None):
+def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print, cancel_event: threading.Event | None = None, output_paths: list | None = None,
+                   allow_ucs_guess: bool = True, min_confidence_threshold: float = 0.0, low_confidence_threshold: float = 25.0):
     """Run the conversion using existing logic without interactive prompts.
 
     Parameters:
@@ -530,7 +657,9 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
             pass
 
         logger(f"Processing single WAV file: {wav_path}")
-        metadata = parse_wav_metadata(wav_path, fps)
+        metadata = parse_wav_metadata(wav_path, fps, allow_ucs_guess=allow_ucs_guess,
+                                      min_confidence_threshold=min_confidence_threshold,
+                                      low_confidence_threshold=low_confidence_threshold)
         if metadata:
             actual_path = create_ale_file([metadata], output_ale_file, fps)
             if actual_path:
@@ -670,6 +799,9 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
     # Decide single-file vs per-subdir (only single-file if user explicitly chose an output path)
     user_requested_single_file = bool(explicit_output_requested and output_ale_file and not os.path.isdir(output_ale_file))
 
+    # Track low-confidence entries for a single CSV per run
+    low_conf_rows = []
+
     if user_requested_single_file:
         if cancel_event is not None and cancel_event.is_set():
             logger("Cancelled before processing top-level WAVs.")
@@ -687,9 +819,20 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
             except Exception:
                 pass
         with ThreadPoolExecutor() as executor:
-            # Pass fps through to parsing so SMPTE frame calc is accurate for non-integer rates
-            metadata_list = list(executor.map(lambda p: parse_wav_metadata(p, fps), top_level_wavs))
+            metadata_list = list(executor.map(lambda p: parse_wav_metadata(p, fps, allow_ucs_guess=allow_ucs_guess,
+                                                                          min_confidence_threshold=min_confidence_threshold,
+                                                                          low_confidence_threshold=low_confidence_threshold), top_level_wavs))
         metadata_list = [m for m in metadata_list if m]
+        # Capture low-confidence for reporting
+        for m in metadata_list:
+            if (m.get('UCS_Low_Confidence') == 'Yes'):
+                low_conf_rows.append({
+                    'File': m.get('Filename', ''),
+                    'UCS_ID': m.get('UCS_ID', ''),
+                    'Category': m.get('Category', ''),
+                    'Subcategory': m.get('Subcategory', ''),
+                    'Score': m.get('UCS_Match_Score', ''),
+                })
         if metadata_list:
             actual_path = create_ale_file(metadata_list, output_ale_file, fps)
             if actual_path:
@@ -738,6 +881,19 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
                 logger(f"Wrote skip log: {skip_log_path}")
             except Exception:
                 pass
+        # Write low-confidence CSV once per run
+        if low_conf_rows:
+            try:
+                lc_path = os.path.join(os.path.dirname(output_ale_file), 'ucs_low_confidence.csv')
+                tmp_lc = lc_path + '.tmp'
+                with open(tmp_lc, 'w', encoding='utf-8', newline='') as f:
+                    writer = csv.DictWriter(f, fieldnames=['File','UCS_ID','Category','Subcategory','Score'])
+                    writer.writeheader()
+                    writer.writerows(low_conf_rows)
+                os.replace(tmp_lc, lc_path)
+                logger(f"Wrote low-confidence report: {lc_path}")
+            except Exception:
+                pass
         if metadata_list:
             logger(f"Successfully created ALE file: {output_ale_file}")
             return True
@@ -768,8 +924,19 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
             except Exception:
                 pass
         with ThreadPoolExecutor() as executor:
-            metadata_list = list(executor.map(lambda p: parse_wav_metadata(p, fps), wavs))
+            metadata_list = list(executor.map(lambda p: parse_wav_metadata(p, fps, allow_ucs_guess=allow_ucs_guess,
+                                                                          min_confidence_threshold=min_confidence_threshold,
+                                                                          low_confidence_threshold=low_confidence_threshold), wavs))
         metadata_list = [m for m in metadata_list if m]
+        for m in metadata_list:
+            if (m.get('UCS_Low_Confidence') == 'Yes'):
+                low_conf_rows.append({
+                    'File': m.get('Filename', ''),
+                    'UCS_ID': m.get('UCS_ID', ''),
+                    'Category': m.get('Category', ''),
+                    'Subcategory': m.get('Subcategory', ''),
+                    'Score': m.get('UCS_Match_Score', ''),
+                })
         if metadata_list:
             actual_path = create_ale_file(metadata_list, out_file, fps)
             if actual_path:
@@ -818,6 +985,19 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
                 logger(f"Wrote skip log: {skip_log_path}")
             except Exception:
                 pass
+    # Finalize low-confidence CSV once per run
+    if low_conf_rows:
+        try:
+            lc_path = os.path.join(ales_output_root, 'ucs_low_confidence.csv')
+            tmp_lc = lc_path + '.tmp'
+            with open(tmp_lc, 'w', encoding='utf-8', newline='') as f:
+                writer = csv.DictWriter(f, fieldnames=['File','UCS_ID','Category','Subcategory','Score'])
+                writer.writeheader()
+                writer.writerows(low_conf_rows)
+            os.replace(tmp_lc, lc_path)
+            logger(f"Wrote low-confidence report: {lc_path}")
+        except Exception:
+            pass
     if cancelled_mid_run:
         logger("Cancelled. Some ALEs may have been created before stopping.")
         return False
@@ -838,6 +1018,7 @@ def launch_gui():
     wav_var = tk.StringVar()
     out_var = tk.StringVar()
     fps_var = tk.StringVar(value="24")
+    ucs_guess_var = tk.BooleanVar(value=True)
     last_outputs = { 'paths': [] }
     cancel_event = threading.Event()
 
@@ -911,7 +1092,9 @@ def launch_gui():
         def worker():
             log("Starting conversion…")
             last_outputs['paths'].clear()
-            ok = run_conversion(None, wavp, outp, fps=fps, logger=log, cancel_event=cancel_event, output_paths=last_outputs['paths'])
+            allow_guess = ucs_guess_var.get()
+            ok = run_conversion(None, wavp, outp, fps=fps, logger=log, cancel_event=cancel_event, output_paths=last_outputs['paths'],
+                              allow_ucs_guess=allow_guess)
             # Update UI from main thread
             def finish_ui():
                 try:
@@ -999,14 +1182,19 @@ def launch_gui():
 
     # FPS
     fps_row = ttk.Frame(frm)
-    fps_row.grid(row=4, column=0, columnspan=3, sticky='w', pady=(6,8))
+    fps_row.grid(row=4, column=0, columnspan=3, sticky='w', pady=(6,0))
     ttk.Label(fps_row, text="FPS:").pack(side='left')
     ttk.Entry(fps_row, textvariable=fps_var, width=8).pack(side='left', padx=(4,0))
     ttk.Label(fps_row, text="(default 24)").pack(side='left', padx=(6,0))
 
+    # UCS best-guess option
+    ucs_row = ttk.Frame(frm)
+    ucs_row.grid(row=5, column=0, columnspan=3, sticky='w', pady=(6,8))
+    ttk.Checkbutton(ucs_row, text="Infer UCS category/subcategory if filename lacks a UCS ID", variable=ucs_guess_var).pack(side='left')
+
     # Action buttons
     buttons_row = ttk.Frame(frm)
-    buttons_row.grid(row=5, column=0, columnspan=3, sticky='w', pady=(0,8))
+    buttons_row.grid(row=6, column=0, columnspan=3, sticky='w', pady=(0,8))
     run_btn = ttk.Button(buttons_row, text="Run", command=run_clicked)
     run_btn.pack(side='left')
     cancel_btn = ttk.Button(buttons_row, text="Cancel", command=cancel_clicked, state='disabled')
@@ -1020,29 +1208,29 @@ def launch_gui():
 
     # Log area with clear button
     log_header = ttk.Frame(frm)
-    log_header.grid(row=6, column=0, columnspan=3, sticky='ew', pady=(0,2))
+    log_header.grid(row=7, column=0, columnspan=3, sticky='ew', pady=(0,2))
     ttk.Label(log_header, text="Output Log").pack(side='left')
     ttk.Button(log_header, text="Clear", command=clear_log, width=8).pack(side='right')
 
     log_text = ScrolledText(frm, height=16, state='disabled')
-    log_text.grid(row=7, column=0, columnspan=3, sticky='nsew')
-    frm.rowconfigure(7, weight=1)
+    log_text.grid(row=8, column=0, columnspan=3, sticky='nsew')
+    frm.rowconfigure(8, weight=1)
 
     # Copyright, website, and version labels below log
     copyright_font = (None, 10)
     copyright_lbl = ttk.Label(frm, text="© Jason Brodkey", font=copyright_font, anchor='w', justify='left')
-    copyright_lbl.grid(row=8, column=0, sticky='w', pady=(4,0))
+    copyright_lbl.grid(row=9, column=0, sticky='w', pady=(4,0))
 
     def open_website(event=None):
         import webbrowser
         webbrowser.open_new_tab('https://www.editcandy.com')
 
     website_lbl = ttk.Label(frm, text="www.editcandy.com", font=copyright_font, foreground="#4ea3ff", cursor="hand2")
-    website_lbl.grid(row=8, column=0, columnspan=3, pady=(4,0))
+    website_lbl.grid(row=9, column=0, columnspan=3, pady=(4,0))
     website_lbl.bind("<Button-1>", open_website)
     
     version_lbl = ttk.Label(frm, text=f"v{__version__}", font=copyright_font, anchor='e', justify='right')
-    version_lbl.grid(row=8, column=2, sticky='e', pady=(4,0))
+    version_lbl.grid(row=9, column=2, sticky='e', pady=(4,0))
     
     frm.columnconfigure(0, weight=1)
 
@@ -1056,6 +1244,26 @@ def main():
     if len(sys.argv) > 1 and sys.argv[1] in ('--version', '-v'):
         print(f"WAVsToALE v{__version__}")
         return
+    
+    # Parse CLI arguments for UCS options
+    allow_ucs_guess = True
+    min_conf = 0.0
+    low_conf = 25.0
+    args = sys.argv[1:]
+    # Back-compat flags
+    if '--no-ucs-guess' in args:
+        allow_ucs_guess = False
+        args.remove('--no-ucs-guess')
+    if '--allow-ucs-guess' in args:
+        allow_ucs_guess = True
+        args.remove('--allow-ucs-guess')
+    # New aliases (preferred)
+    if '--no-ucs-inference' in args:
+        allow_ucs_guess = False
+        args.remove('--no-ucs-inference')
+    if '--ucs-inference' in args:
+        allow_ucs_guess = True
+        args.remove('--ucs-inference')
     
     # Try to find UCS CSV in the script directory first
     try:
@@ -1155,7 +1363,8 @@ def main():
         
         # Process single WAV file
         print(f"Processing single WAV file: {single_wav_file}")
-        metadata = parse_wav_metadata(single_wav_file, fps)
+        metadata = parse_wav_metadata(single_wav_file, fps, allow_ucs_guess=allow_ucs_guess,
+                                      min_confidence_threshold=min_conf, low_confidence_threshold=low_conf)
 
         if metadata:
             actual_path = create_ale_file([metadata], output_ale_file, fps)
@@ -1242,7 +1451,9 @@ def main():
 
         start_len = len(SKIP_LOG)
         with ThreadPoolExecutor() as executor:
-            metadata_list = list(executor.map(lambda p: parse_wav_metadata(p, fps), top_level_wavs))
+            metadata_list = list(executor.map(lambda p: parse_wav_metadata(p, fps, allow_ucs_guess=allow_ucs_guess,
+                                                                          min_confidence_threshold=min_conf,
+                                                                          low_confidence_threshold=low_conf), top_level_wavs))
         metadata_list = [m for m in metadata_list if m]
 
         create_ale_file(metadata_list, output_ale_file, fps)
@@ -1304,7 +1515,9 @@ def main():
 
             start_len = len(SKIP_LOG)
             with ThreadPoolExecutor() as executor:
-                metadata_list = list(executor.map(lambda p: parse_wav_metadata(p, fps), wavs))
+                metadata_list = list(executor.map(lambda p: parse_wav_metadata(p, fps, allow_ucs_guess=allow_ucs_guess,
+                                                                              min_confidence_threshold=min_conf,
+                                                                              low_confidence_threshold=low_conf), wavs))
             metadata_list = [m for m in metadata_list if m]
 
             if metadata_list:

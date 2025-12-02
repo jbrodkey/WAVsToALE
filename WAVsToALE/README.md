@@ -55,3 +55,26 @@ The script auto-includes the UCS CSV from `data/` and the macOS icon from `icons
 - Python 3.8+
 - Tkinter available (for GUI)
 
+## Usage
+
+- GUI: Run the script to open the UI and use the checkbox labeled "Infer UCS category/subcategory if filename lacks a UCS ID" to toggle automatic UCS inference when no UCS ID prefix is present in the filename.
+
+    ```zsh
+    python3 wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
+    ```
+
+- CLI flags: Prefer the new aliases; legacy flags remain supported.
+    - Enable inference: `--ucs-inference` (legacy: `--allow-ucs-guess`)
+    - Disable inference: `--no-ucs-inference` (legacy: `--no-ucs-guess`)
+
+    Examples:
+    ```zsh
+    # Process a single WAV, enable UCS inference
+    python3 wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py --ucs-inference \
+        /path/to/file.wav /path/to/output
+
+    # Process a folder (one ALE per subfolder), disable inference
+    python3 wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py --no-ucs-inference \
+        /path/to/folder /path/to/output
+    ```
+
