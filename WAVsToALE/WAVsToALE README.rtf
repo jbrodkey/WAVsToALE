@@ -1,0 +1,22 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Arial;}}
+\fs28 WAVsToALE — Readme\par
+\fs24 Version 1.0.1\par
+\par
+\b Overview\b0\par
+WAVsToALE generates Avid ALE files from WAV metadata (BEXT, LIST-INFO, embedded XML). It can automatically infer UCS category/subcategory when no UCS ID prefix is present in the filename.\par
+\par
+\b Quick Start (Windows)\b0\par
+1) Run \b WAVsToALE.exe\b0\par
+2) Choose input WAVs or a folder, and an output directory\par
+3) (Optional) Check “Infer UCS category/subcategory if filename lacks a UCS ID”\par
+4) Click Run; find ALE outputs in your chosen location\par
+\par
+\b UCS Inference (Best‑Guess)\b0\par
+When filenames lack a UCS ID prefix, the app infers category/subcategory by scoring text from filename words, BEXT Description, LIST-INFO, and embedded XML.\par
+Scoring favors whole‑word overlaps with UCS Subcategory, then keywords/synonyms, then partial matches (3+ chars). Low‑confidence matches are flagged.\par
+\par
+\b Support\b0\par
+Issues: https://github.com/jbrodkey/WAVsToALE/issues\par
+Releases: https://github.com/jbrodkey/WAVsToALE/releases\par
+}
