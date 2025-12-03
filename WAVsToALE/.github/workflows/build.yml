@@ -84,3 +84,30 @@ jobs:
         with:
           name: windows-exe
           path: dist/WAVsToALE.exe
+
+      - name: Create distribution package (zip)
+        shell: pwsh
+        run: |
+          Set-StrictMode -Version Latest
+          cd dist
+          # Prepare folder
+          if (Test-Path 'WAVsToALE') { Remove-Item -Path 'WAVsToALE' -Recurse -Force }
+          New-Item -ItemType Directory -Path 'WAVsToALE' | Out-Null
+          # Copy exe
+          Copy-Item 'WAVsToALE.exe' 'WAVsToALE/'
+          # Optional README (skip if missing)
+          $readmePath = Join-Path (Split-Path -Parent (Split-Path -Parent (Get-Location))) 'WAVsToALE README.rtf'
+          if (Test-Path $readmePath) {
+            Copy-Item $readmePath 'WAVsToALE/' -ErrorAction SilentlyContinue
+          } else {
+            Write-Host 'README file not found, skipping...'
+          }
+          # Zip
+          Compress-Archive -Path 'WAVsToALE' -DestinationPath 'WAVsToALE-Windows-v1.0.1.zip'
+          Get-ChildItem
+
+      - name: Upload distribution package
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-zip
+          path: dist/WAVsToALE-Windows-v1.0.1.zip
