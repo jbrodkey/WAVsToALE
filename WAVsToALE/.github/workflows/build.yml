@@ -50,6 +50,11 @@ jobs:
           name: macos-onedir
           path: dist/WAVsToALE
 
+      - name: Validate macOS app bundle
+        run: |
+          chmod +x validate_bundle.sh
+          ./validate_bundle.sh
+
   build-windows:
     name: build-windows
     runs-on: windows-latest
@@ -120,3 +125,8 @@ jobs:
         with:
           name: windows-zip
           path: dist/WAVsToALE-Windows-v1.0.1.zip
+
+      - name: Validate Windows build
+        shell: cmd
+        run: |
+          validate_windows.bat

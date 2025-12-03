@@ -29,24 +29,27 @@ else
     ICON_FLAG=""
 fi
 
+
+# No pre-build Info.plist update; we'll update the built app's plist post-build.
+
 # Clean previous builds
 echo "Cleaning previous builds..."
-rm -rf build/ dist/ *.spec
+rm -rf build/ dist/
 
-# Build with PyInstaller (onedir mode for macOS)
+# Build with PyInstaller using spec file (includes version info)
 echo "Building application..."
-pyinstaller \
-    --onedir \
-    --windowed \
-    --name WAVsToALE \
-    $ICON_FLAG \
-    --hidden-import=tkinter \
-    --hidden-import=tkinter.ttk \
-    --hidden-import=tkinter.filedialog \
-    --hidden-import=tkinter.messagebox \
-    --hidden-import=tkinter.font \
-    --hidden-import=tkinter.scrolledtext \
-    $DATA_FLAG \
-    wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
+pyinstaller WAVsToALE.spec
+
 
 echo "Build complete! Check dist/ folder for WAVsToALE.app"
+
+# Update built app Info.plist with version from Python source
+echo "Updating app Info.plist with version..."
+./packaging/update_info_plist.sh || {
+    echo "Info.plist update failed; ensure app exists at dist/WAVsToALE.app";
+    exit 1;
+}
+
+# Run automated validation
+echo "Running automated validation..."
+./validate_bundle.sh

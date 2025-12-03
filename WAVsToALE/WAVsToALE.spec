@@ -47,5 +47,12 @@ app = BUNDLE(
     coll,
     name='WAVsToALE.app',
     icon='icons/mac/WAVsToALE.icns',
-    bundle_identifier=None,
+    bundle_identifier='com.editcandy.wavstoale',
+    info_plist={
+        'CFBundleName': 'WAVsToALE',
+        'CFBundleDisplayName': 'WAVsToALE',
+        'CFBundleShortVersionString': '1.0.1',
+        'CFBundleVersion': '1.0.1',
+        'NSHighResolutionCapable': True,
+    },
 )
