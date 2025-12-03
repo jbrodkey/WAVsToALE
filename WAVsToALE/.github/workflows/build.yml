@@ -95,12 +95,13 @@ jobs:
           New-Item -ItemType Directory -Path 'WAVsToALE' | Out-Null
           # Copy exe
           Copy-Item 'WAVsToALE.exe' 'WAVsToALE/'
-          # Optional README (skip if missing)
-          $readmePath = Join-Path (Split-Path -Parent (Split-Path -Parent (Get-Location))) 'WAVsToALE README.rtf'
-          if (Test-Path $readmePath) {
-            Copy-Item $readmePath 'WAVsToALE/' -ErrorAction SilentlyContinue
+          # Platform-specific README (Windows)
+          $repoRoot = Split-Path -Parent (Split-Path -Parent (Get-Location))
+          $winReadme = Join-Path $repoRoot 'docs/README_windows.rtf'
+          if (Test-Path $winReadme) {
+            Copy-Item $winReadme 'WAVsToALE/README.rtf' -ErrorAction SilentlyContinue
           } else {
-            Write-Host 'README file not found, skipping...'
+            Write-Host 'Windows README not found, skipping...'
           }
           # Zip
           Compress-Archive -Path 'WAVsToALE' -DestinationPath 'WAVsToALE-Windows-v1.0.1.zip'

@@ -63,6 +63,21 @@ The script auto-includes the UCS CSV from `data/` and the macOS icon from `icons
     python3 wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
     ```
 
+## UCS Inference (Best‑Guess)
+
+- Purpose: When a filename lacks a UCS ID prefix (e.g., `CATID_...`), the tool can infer the most likely UCS category/subcategory.
+- Inputs considered: filename words, BEXT Description, LIST-INFO fields, and any embedded XML text.
+- How it works (concise):
+    - Normalize text (lowercase, strip punctuation, split into words).
+    - Score each UCS entry using:
+        - Whole‑word overlaps with the UCS Subcategory (highest weight).
+        - Keyword/synonym overlaps from the UCS list (medium weight).
+        - Partial string matches on the UCS Subcategory (lower weight, 3+ chars).
+    - Pick the top score; record alternatives and flag low‑confidence if the score is below a threshold.
+- Controls:
+    - GUI: Checkbox “Infer UCS category/subcategory if filename lacks a UCS ID”.
+    - CLI: `--ucs-inference` to enable, `--no-ucs-inference` to disable.
+
 ## Releases
 
 - Latest releases and changelog: https://github.com/jbrodkey/WAVsToALE/releases
