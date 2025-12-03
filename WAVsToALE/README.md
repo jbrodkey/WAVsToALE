@@ -63,6 +63,10 @@ The script auto-includes the UCS CSV from `data/` and the macOS icon from `icons
     python3 wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
     ```
 
+## Releases
+
+- Latest releases and changelog: https://github.com/jbrodkey/WAVsToALE/releases
+
 - CLI flags: Prefer the new aliases; legacy flags remain supported.
     - Enable inference: `--ucs-inference` (legacy: `--allow-ucs-guess`)
     - Disable inference: `--no-ucs-inference` (legacy: `--no-ucs-guess`)
