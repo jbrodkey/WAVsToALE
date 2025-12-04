@@ -120,72 +120,39 @@ def load_ucs_mapping(csv_file_path):
     - keywords (list)
     """
     ucs_mapping = {}
-    debug_log = []
     fieldnames = None
     rows = None
-    encoding_used = None
     
     try:
         # Try embedded data first (most reliable for PyInstaller)
         if UCS_DATA_B64:
-            debug_log.append("Using embedded UCS data (bypasses PyInstaller file issues)")
             try:
                 compressed_data = base64.b64decode(UCS_DATA_B64)
                 csv_content = gzip.decompress(compressed_data).decode('utf-8')
-                debug_log.append(f"Decompressed embedded data: {len(csv_content)} bytes")
                 
                 reader = csv.DictReader(io.StringIO(csv_content))
                 fieldnames = reader.fieldnames
                 rows = list(reader)
-                encoding_used = 'embedded'
-                debug_log.append(f"Successfully read embedded CSV, {len(rows)} rows")
-            except Exception as e:
-                debug_log.append(f"Failed to load embedded data: {e}")
+            except Exception:
                 # Fall through to file-based loading
+                pass
         
         # Fall back to file-based loading if embedded data failed or unavailable
         if not rows and csv_file_path:
             # Try gzipped version first (more reliable with PyInstaller on Windows)
             gz_path = csv_file_path + '.gz'
             if os.path.isfile(gz_path):
-                debug_log.append(f"Found gzipped CSV at: {gz_path}")
                 csv_file_path = gz_path
                 use_gzip = True
             else:
                 use_gzip = False
                 
             # Ensure the file exists
-            debug_log.append(f"Attempting to load UCS CSV from: {csv_file_path}")
             if not os.path.isfile(csv_file_path):
-                msg = f"Error: UCS CSV file not found at {csv_file_path}"
-                print(msg)
-                debug_log.append(msg)
-                _write_debug_log(debug_log)
+                print(f"Error: UCS CSV file not found at {csv_file_path}")
                 return {}
-        
-            # Log file size for debugging
-            file_size = os.path.getsize(csv_file_path)
-            debug_log.append(f"CSV file size: {file_size} bytes ({file_size/1024:.1f} KB)")
-            
-            # Read raw content to check for truncation
-            if use_gzip:
-                with gzip.open(csv_file_path, 'rb') as f:
-                    raw_content = f.read()
-                    debug_log.append(f"Gzipped file decompressed: {len(raw_content)} bytes")
-                    # Count actual line breaks
-                    line_count = raw_content.count(b'\n')
-                    debug_log.append(f"Line breaks found: {line_count}")
-            else:
-                with open(csv_file_path, 'rb') as f:
-                    raw_content = f.read()
-                    debug_log.append(f"Raw file read: {len(raw_content)} bytes")
-                    # Count actual line breaks
-                    line_count = raw_content.count(b'\n')
-                    debug_log.append(f"Line breaks found: {line_count}")
             
             # Try UTF-8 first, fallback to latin-1 for Windows encoding issues
-            # Also try different newline modes for cross-platform compatibility
-            encoding_used = None
             try:
                 # Open gzipped or regular file
                 open_func = gzip.open if use_gzip else open
@@ -194,16 +161,11 @@ def load_ucs_mapping(csv_file_path):
                     reader = csv.DictReader(csv_file)
                     if not reader.fieldnames:
                         print("Error: CSV file has no header row.")
-                        debug_log.append("Error: CSV has no header row")
-                        _write_debug_log(debug_log)
                         return {}
                     
                     fieldnames = reader.fieldnames
                     rows = list(reader)
-                    encoding_used = 'utf-8'
-                    debug_log.append(f"Successfully read CSV with UTF-8 encoding, {len(rows)} rows")
-            except (UnicodeDecodeError, UnicodeError) as e:
-                debug_log.append(f"UTF-8 decode failed: {e}, trying latin-1...")
+            except (UnicodeDecodeError, UnicodeError):
                 print("Warning: UTF-8 decode failed, trying latin-1...")
                 open_func = gzip.open if use_gzip else open
                 mode = 'rt' if use_gzip else 'r'
@@ -211,27 +173,19 @@ def load_ucs_mapping(csv_file_path):
                     reader = csv.DictReader(csv_file)
                     if not reader.fieldnames:
                         print("Error: CSV file has no header row.")
-                        debug_log.append("Error: CSV has no header row (latin-1)")
-                        _write_debug_log(debug_log)
                         return {}
                     
                     fieldnames = reader.fieldnames
                     rows = list(reader)
-                    encoding_used = 'latin-1'
-                    debug_log.append(f"Successfully read CSV with latin-1 encoding, {len(rows)} rows")
 
         # Build a case-insensitive map of header -> original header
         headers = [h.strip() for h in fieldnames]
         lower_map = {h.lower(): h for h in headers}
-        debug_log.append(f"CSV headers found: {headers[:10]}")  # Log first 10 headers
 
         # Required keys (case-insensitive)
         required = ['category', 'subcategory']
         if not all(k in lower_map for k in required):
-            msg = f"Error: CSV file is missing required columns. Found headers: {headers}"
-            print(msg)
-            debug_log.append(msg)
-            _write_debug_log(debug_log)
+            print(f"Error: CSV file is missing required columns. Found headers: {headers}")
             return {}
 
         # Use the actual header names when reading rows to preserve original casing
@@ -242,13 +196,8 @@ def load_ucs_mapping(csv_file_path):
         # Optional text fields
         expl_h = lower_map.get('explanations') or lower_map.get('description')
         keywords_h = lower_map.get('synonyms - comma separated') or lower_map.get('keywords')
-        
-        debug_log.append(f"Total rows to process: {len(rows)}")
-        rows_processed = 0
-        rows_skipped = 0
 
         for row in rows:
-            rows_processed += 1
             cat_id = (row.get(catid_h) or '').strip()
             category = (row.get(category_h) or 'Unknown').strip()
             subcategory = (row.get(subcategory_h) or 'Unknown').strip()
@@ -265,27 +214,14 @@ def load_ucs_mapping(csv_file_path):
                     'explanations': explanations,
                     'keywords': keywords,
                 }
-            else:
-                rows_skipped += 1
-        
-        debug_log.append(f"Rows processed: {rows_processed}, Rows skipped (no ID): {rows_skipped}, Entries created: {len(ucs_mapping)}")
         
         if ucs_mapping:
-            msg = f"Loaded {len(ucs_mapping)} UCS entries from {csv_file_path}"
-            print(msg)
-            debug_log.append(msg)
-            debug_log.append(f"Sample entries: {list(ucs_mapping.keys())[:5]}")
+            print(f"Loaded {len(ucs_mapping)} UCS entries")
         else:
-            msg = f"Warning: No UCS entries loaded from {csv_file_path}"
-            print(msg)
-            debug_log.append(msg)
-        _write_debug_log(debug_log)
+            print(f"Warning: No UCS entries loaded")
             
     except Exception as e:
-        msg = f"Error loading UCS mapping from CSV: {e}"
-        print(msg)
-        debug_log.append(msg)
-        _write_debug_log(debug_log)
+        print(f"Error loading UCS mapping from CSV: {e}")
         import traceback
         traceback.print_exc()
     return ucs_mapping
