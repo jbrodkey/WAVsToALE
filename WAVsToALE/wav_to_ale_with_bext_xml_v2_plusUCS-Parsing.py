@@ -123,6 +123,18 @@ def load_ucs_mapping(csv_file_path):
             _write_debug_log(debug_log)
             return {}
         
+        # Log file size for debugging
+        file_size = os.path.getsize(csv_file_path)
+        debug_log.append(f"CSV file size: {file_size} bytes ({file_size/1024:.1f} KB)")
+        
+        # Read raw content to check for truncation
+        with open(csv_file_path, 'rb') as f:
+            raw_content = f.read()
+            debug_log.append(f"Raw file read: {len(raw_content)} bytes")
+            # Count actual line breaks
+            line_count = raw_content.count(b'\n')
+            debug_log.append(f"Line breaks found: {line_count}")
+        
         # Try UTF-8 first, fallback to latin-1 for Windows encoding issues
         # Also try different newline modes for cross-platform compatibility
         encoding_used = None
