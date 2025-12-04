@@ -690,9 +690,11 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
             except Exception:
                 pass
 
-    if not ucs_csv_file or not os.path.isfile(ucs_csv_file):
-        logger("Error: No valid UCS CSV file provided.")
-        return False
+    # Note: ucs_csv_file may be None - load_ucs_mapping will use embedded data as fallback
+    # Only error if we have a path that doesn't exist
+    if ucs_csv_file and not os.path.isfile(ucs_csv_file):
+        logger(f"Warning: UCS CSV file not found at {ucs_csv_file}, using embedded data")
+        ucs_csv_file = None
 
     # Validate wav_path
     if not wav_path:
@@ -710,7 +712,7 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
     # Load UCS mapping
     UCS_MAPPING = load_ucs_mapping(ucs_csv_file)
     if not UCS_MAPPING:
-        logger("Error: Failed to load UCS mapping. Ensure the CSV file is valid.")
+        logger("Error: Failed to load UCS mapping from embedded data or CSV file.")
         return False
 
     # Single WAV file case
@@ -1132,11 +1134,8 @@ def launch_gui():
         except Exception:
             pass
     
-    # Load UCS mapping for status display
-    if ucs_csv_file:
-        UCS_MAPPING = load_ucs_mapping(ucs_csv_file)
-    else:
-        UCS_MAPPING = {}
+    # Load UCS mapping for status display (will use embedded data if file not found)
+    UCS_MAPPING = load_ucs_mapping(ucs_csv_file)
 
     root = tk.Tk()
     root.title("WAVsToALE")
