@@ -1145,6 +1145,7 @@ def launch_gui():
         log_text.delete('1.0', 'end')
         log_text.configure(state='disabled')
         # Also hide the "Open ALE Location" button when log is cleared
+        open_btn.configure(state='disabled')
         open_btn.pack_forget()
 
     def open_output_location():
@@ -1154,7 +1155,12 @@ def launch_gui():
         if outp:
             try:
                 folder = outp if os.path.isdir(outp) else os.path.dirname(outp)
-                subprocess.run(['open', folder], check=False)
+                if sys.platform == 'win32':
+                    os.startfile(folder)
+                elif sys.platform == 'darwin':
+                    subprocess.run(['open', folder], check=False)
+                else:
+                    subprocess.run(['xdg-open', folder], check=False)
                 return
             except Exception:
                 pass
@@ -1163,19 +1169,29 @@ def launch_gui():
         if paths:
             target = paths[-1]  # last created ALE
             try:
-                subprocess.run(['open', '-R', target], check=False)
+                if sys.platform == 'win32':
+                    os.startfile(os.path.dirname(target))
+                elif sys.platform == 'darwin':
+                    subprocess.run(['open', '-R', target], check=False)
+                else:
+                    subprocess.run(['xdg-open', os.path.dirname(target)], check=False)
                 return
             except Exception:
                 pass
-        # Fallback: open expected folder based on inputs
+        # Fallback: open expected folder based on inputs (single WAV goes directly to ALEs folder)
         try:
             if os.path.isfile(wavp):
-                wb = os.path.splitext(os.path.basename(wavp))[0]
-                folder = os.path.join(os.path.dirname(wavp), 'ALEs', wb)
+                # Single WAV: ALEs folder is directly under the WAV's parent
+                folder = os.path.join(os.path.dirname(wavp), 'ALEs')
             else:
-                wb = os.path.basename(os.path.normpath(wavp))
-                folder = os.path.join(os.path.dirname(os.path.normpath(wavp)), 'ALEs', wb)
-            subprocess.run(['open', folder], check=False)
+                # Directory: ALEs folder is next to the input directory
+                folder = os.path.join(os.path.dirname(os.path.normpath(wavp)), 'ALEs')
+            if sys.platform == 'win32':
+                os.startfile(folder)
+            elif sys.platform == 'darwin':
+                subprocess.run(['open', folder], check=False)
+            else:
+                subprocess.run(['xdg-open', folder], check=False)
         except Exception:
             messagebox.showwarning("Open Location", "Could not open the ALE location.")
 
