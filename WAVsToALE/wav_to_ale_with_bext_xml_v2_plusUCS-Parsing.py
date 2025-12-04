@@ -35,6 +35,7 @@ import sys
 import threading
 import subprocess
 import tempfile
+import datetime
 try:
     import tkinter as tk
     from tkinter import ttk, filedialog, messagebox, font
@@ -75,6 +76,20 @@ UCS_MAPPING = {}
 # Collect skipped files/errors for later logging (silently skip during run)
 SKIP_LOG = []
 
+def _write_debug_log(messages):
+    """Write debug messages to a log file in the user's home directory."""
+    try:
+        home_dir = os.path.expanduser('~')
+        log_file = os.path.join(home_dir, 'WAVsToALE_debug.log')
+        timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(f"\n{'='*80}\n")
+            f.write(f"[{timestamp}]\n")
+            for msg in messages:
+                f.write(f"{msg}\n")
+    except Exception:
+        pass
+
 def resource_path(relative_path):
     """Get absolute path to resource, works for PyInstaller and normal execution.
 
@@ -97,10 +112,15 @@ def load_ucs_mapping(csv_file_path):
     - keywords (list)
     """
     ucs_mapping = {}
+    debug_log = []
     try:
         # Ensure the file exists
+        debug_log.append(f"Attempting to load UCS CSV from: {csv_file_path}")
         if not os.path.isfile(csv_file_path):
-            print(f"Error: UCS CSV file not found at {csv_file_path}")
+            msg = f"Error: UCS CSV file not found at {csv_file_path}"
+            print(msg)
+            debug_log.append(msg)
+            _write_debug_log(debug_log)
             return {}
         
         # Try UTF-8 first, fallback to latin-1 for Windows encoding issues
@@ -162,12 +182,21 @@ def load_ucs_mapping(csv_file_path):
                 }
         
         if ucs_mapping:
-            print(f"Loaded {len(ucs_mapping)} UCS entries from {csv_file_path}")
+            msg = f"Loaded {len(ucs_mapping)} UCS entries from {csv_file_path}"
+            print(msg)
+            debug_log.append(msg)
+            debug_log.append(f"Sample entries: {list(ucs_mapping.keys())[:5]}")
         else:
-            print(f"Warning: No UCS entries loaded from {csv_file_path}")
+            msg = f"Warning: No UCS entries loaded from {csv_file_path}"
+            print(msg)
+            debug_log.append(msg)
+        _write_debug_log(debug_log)
             
     except Exception as e:
-        print(f"Error loading UCS mapping from CSV: {e}")
+        msg = f"Error loading UCS mapping from CSV: {e}"
+        print(msg)
+        debug_log.append(msg)
+        _write_debug_log(debug_log)
         import traceback
         traceback.print_exc()
     return ucs_mapping
@@ -1057,6 +1086,33 @@ def launch_gui():
         print("GUI components are unavailable. Ensure tkinter is installed.")
         return
 
+    # Find and load UCS CSV at GUI startup
+    global UCS_MAPPING
+    try:
+        script_dir = os.path.dirname(os.path.realpath(__file__))
+    except Exception:
+        script_dir = os.getcwd()
+    
+    default_name = 'data/UCS_v8.2.1_Full_List.csv'
+    default_ucs = resource_path(default_name)
+    ucs_csv_file = default_ucs if os.path.isfile(default_ucs) else None
+    
+    if not ucs_csv_file:
+        base_dir = getattr(sys, "_MEIPASS", script_dir)
+        try:
+            for fname in os.listdir(base_dir):
+                if fname.lower().endswith('.csv') and 'ucs' in fname.lower():
+                    ucs_csv_file = os.path.join(base_dir, fname)
+                    break
+        except Exception:
+            pass
+    
+    # Load UCS mapping for status display
+    if ucs_csv_file:
+        UCS_MAPPING = load_ucs_mapping(ucs_csv_file)
+    else:
+        UCS_MAPPING = {}
+
     root = tk.Tk()
     root.title("WAVsToALE")
     root.geometry("680x520")
@@ -1224,6 +1280,13 @@ def launch_gui():
             messagebox.showwarning("Open Location", "Could not open the ALE location.")
 
     # Layout
+    # Status bar at top
+    status_frame = ttk.Frame(root, padding=(12, 8, 12, 0))
+    status_frame.pack(fill='x')
+    status_var = tk.StringVar()
+    status_label = ttk.Label(status_frame, textvariable=status_var, font=(None, 9), foreground='#666')
+    status_label.pack(anchor='w')
+    
     frm = ttk.Frame(root, padding=12)
     frm.pack(fill='both', expand=True)
 
@@ -1298,6 +1361,12 @@ def launch_gui():
     version_lbl.grid(row=9, column=2, sticky='e', pady=(4,0))
     
     frm.columnconfigure(0, weight=1)
+
+    # Update status bar with UCS loading info
+    if UCS_MAPPING:
+        status_var.set(f"✓ UCS Database: {len(UCS_MAPPING)} entries loaded")
+    else:
+        status_var.set("⚠ UCS Database: Failed to load (inference disabled)")
 
     root.mainloop()
 
