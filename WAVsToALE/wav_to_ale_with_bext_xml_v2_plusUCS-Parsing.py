@@ -639,14 +639,14 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
 
         wav_basename = os.path.splitext(os.path.basename(wav_path))[0]
         if not output_ale_file:
-            # Place default output inside a folder named after the WAV
+            # Place default output directly into the ALEs folder (no subdirectory for single WAVs)
             wav_parent = os.path.dirname(wav_path)
             ales_dir = os.path.join(wav_parent, 'ALEs')
             try:
                 os.makedirs(ales_dir, exist_ok=True)
             except Exception:
                 pass
-            output_ale_file = os.path.join(ales_dir, wav_basename, f"{wav_basename}.ale")
+            output_ale_file = os.path.join(ales_dir, f"{wav_basename}.ale")
             logger(f"Using default ALE filepath: {output_ale_file}")
         elif os.path.isdir(output_ale_file):
             output_ale_file = os.path.join(output_ale_file, f"{wav_basename}.ale")
@@ -666,6 +666,25 @@ def run_conversion(ucs_csv_file, wav_path, output_ale_file, fps=24, logger=print
                 if output_paths is not None:
                     output_paths.append(actual_path)
                 logger(f"Successfully created ALE file for single WAV: {actual_path}")
+                # Write low-confidence CSV if applicable
+                if metadata.get('UCS_Low_Confidence') == 'Yes':
+                    try:
+                        lc_path = os.path.join(os.path.dirname(actual_path), 'ucs_low_confidence.csv')
+                        tmp_lc = lc_path + '.tmp'
+                        with open(tmp_lc, 'w', encoding='utf-8', newline='') as f:
+                            writer = csv.DictWriter(f, fieldnames=['File','UCS_ID','Category','Subcategory','Score'])
+                            writer.writeheader()
+                            writer.writerow({
+                                'File': metadata.get('Filename', ''),
+                                'UCS_ID': metadata.get('UCS_ID', ''),
+                                'Category': metadata.get('Category', ''),
+                                'Subcategory': metadata.get('Subcategory', ''),
+                                'Score': metadata.get('UCS_Match_Score', ''),
+                            })
+                        os.replace(tmp_lc, lc_path)
+                        logger(f"Wrote low-confidence report: {lc_path}")
+                    except Exception:
+                        pass
             return True
         else:
             logger(f"Error: Failed to parse WAV file: {wav_path}")
@@ -1125,6 +1144,8 @@ def launch_gui():
         log_text.configure(state='normal')
         log_text.delete('1.0', 'end')
         log_text.configure(state='disabled')
+        # Also hide the "Open ALE Location" button when log is cleared
+        open_btn.pack_forget()
 
     def open_output_location():
         # If the user set an Output Folder, prioritize opening that location
