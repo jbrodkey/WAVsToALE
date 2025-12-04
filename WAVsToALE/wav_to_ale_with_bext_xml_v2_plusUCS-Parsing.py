@@ -124,34 +124,49 @@ def load_ucs_mapping(csv_file_path):
             return {}
         
         # Try UTF-8 first, fallback to latin-1 for Windows encoding issues
+        # Also try different newline modes for cross-platform compatibility
+        encoding_used = None
         try:
-            with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
+            with open(csv_file_path, 'r', encoding='utf-8', newline='') as csv_file:
                 reader = csv.DictReader(csv_file)
                 if not reader.fieldnames:
                     print("Error: CSV file has no header row.")
+                    debug_log.append("Error: CSV has no header row")
+                    _write_debug_log(debug_log)
                     return {}
                 
                 fieldnames = reader.fieldnames
                 rows = list(reader)
-        except (UnicodeDecodeError, UnicodeError):
+                encoding_used = 'utf-8'
+                debug_log.append(f"Successfully read CSV with UTF-8 encoding, {len(rows)} rows")
+        except (UnicodeDecodeError, UnicodeError) as e:
+            debug_log.append(f"UTF-8 decode failed: {e}, trying latin-1...")
             print("Warning: UTF-8 decode failed, trying latin-1...")
-            with open(csv_file_path, 'r', encoding='latin-1') as csv_file:
+            with open(csv_file_path, 'r', encoding='latin-1', newline='') as csv_file:
                 reader = csv.DictReader(csv_file)
                 if not reader.fieldnames:
                     print("Error: CSV file has no header row.")
+                    debug_log.append("Error: CSV has no header row (latin-1)")
+                    _write_debug_log(debug_log)
                     return {}
                 
                 fieldnames = reader.fieldnames
                 rows = list(reader)
+                encoding_used = 'latin-1'
+                debug_log.append(f"Successfully read CSV with latin-1 encoding, {len(rows)} rows")
 
         # Build a case-insensitive map of header -> original header
         headers = [h.strip() for h in fieldnames]
         lower_map = {h.lower(): h for h in headers}
+        debug_log.append(f"CSV headers found: {headers[:10]}")  # Log first 10 headers
 
         # Required keys (case-insensitive)
         required = ['category', 'subcategory']
         if not all(k in lower_map for k in required):
-            print(f"Error: CSV file is missing required columns. Found headers: {headers}")
+            msg = f"Error: CSV file is missing required columns. Found headers: {headers}"
+            print(msg)
+            debug_log.append(msg)
+            _write_debug_log(debug_log)
             return {}
 
         # Use the actual header names when reading rows to preserve original casing
@@ -162,8 +177,13 @@ def load_ucs_mapping(csv_file_path):
         # Optional text fields
         expl_h = lower_map.get('explanations') or lower_map.get('description')
         keywords_h = lower_map.get('synonyms - comma separated') or lower_map.get('keywords')
+        
+        debug_log.append(f"Total rows to process: {len(rows)}")
+        rows_processed = 0
+        rows_skipped = 0
 
         for row in rows:
+            rows_processed += 1
             cat_id = (row.get(catid_h) or '').strip()
             category = (row.get(category_h) or 'Unknown').strip()
             subcategory = (row.get(subcategory_h) or 'Unknown').strip()
@@ -180,6 +200,10 @@ def load_ucs_mapping(csv_file_path):
                     'explanations': explanations,
                     'keywords': keywords,
                 }
+            else:
+                rows_skipped += 1
+        
+        debug_log.append(f"Rows processed: {rows_processed}, Rows skipped (no ID): {rows_skipped}, Entries created: {len(ucs_mapping)}")
         
         if ucs_mapping:
             msg = f"Loaded {len(ucs_mapping)} UCS entries from {csv_file_path}"
