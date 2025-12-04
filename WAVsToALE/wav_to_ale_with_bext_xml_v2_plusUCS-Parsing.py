@@ -29,6 +29,7 @@ import csv
 import wave
 import io
 import struct
+import gzip
 from xml.etree.ElementTree import iterparse
 from concurrent.futures import ThreadPoolExecutor
 import sys
@@ -114,6 +115,15 @@ def load_ucs_mapping(csv_file_path):
     ucs_mapping = {}
     debug_log = []
     try:
+        # Try gzipped version first (more reliable with PyInstaller on Windows)
+        gz_path = csv_file_path + '.gz'
+        if os.path.isfile(gz_path):
+            debug_log.append(f"Found gzipped CSV at: {gz_path}")
+            csv_file_path = gz_path
+            use_gzip = True
+        else:
+            use_gzip = False
+            
         # Ensure the file exists
         debug_log.append(f"Attempting to load UCS CSV from: {csv_file_path}")
         if not os.path.isfile(csv_file_path):
@@ -128,18 +138,29 @@ def load_ucs_mapping(csv_file_path):
         debug_log.append(f"CSV file size: {file_size} bytes ({file_size/1024:.1f} KB)")
         
         # Read raw content to check for truncation
-        with open(csv_file_path, 'rb') as f:
-            raw_content = f.read()
-            debug_log.append(f"Raw file read: {len(raw_content)} bytes")
-            # Count actual line breaks
-            line_count = raw_content.count(b'\n')
-            debug_log.append(f"Line breaks found: {line_count}")
+        if use_gzip:
+            with gzip.open(csv_file_path, 'rb') as f:
+                raw_content = f.read()
+                debug_log.append(f"Gzipped file decompressed: {len(raw_content)} bytes")
+                # Count actual line breaks
+                line_count = raw_content.count(b'\n')
+                debug_log.append(f"Line breaks found: {line_count}")
+        else:
+            with open(csv_file_path, 'rb') as f:
+                raw_content = f.read()
+                debug_log.append(f"Raw file read: {len(raw_content)} bytes")
+                # Count actual line breaks
+                line_count = raw_content.count(b'\n')
+                debug_log.append(f"Line breaks found: {line_count}")
         
         # Try UTF-8 first, fallback to latin-1 for Windows encoding issues
         # Also try different newline modes for cross-platform compatibility
         encoding_used = None
         try:
-            with open(csv_file_path, 'r', encoding='utf-8', newline='') as csv_file:
+            # Open gzipped or regular file
+            open_func = gzip.open if use_gzip else open
+            mode = 'rt' if use_gzip else 'r'
+            with open_func(csv_file_path, mode, encoding='utf-8', newline='') as csv_file:
                 reader = csv.DictReader(csv_file)
                 if not reader.fieldnames:
                     print("Error: CSV file has no header row.")
@@ -154,7 +175,9 @@ def load_ucs_mapping(csv_file_path):
         except (UnicodeDecodeError, UnicodeError) as e:
             debug_log.append(f"UTF-8 decode failed: {e}, trying latin-1...")
             print("Warning: UTF-8 decode failed, trying latin-1...")
-            with open(csv_file_path, 'r', encoding='latin-1', newline='') as csv_file:
+            open_func = gzip.open if use_gzip else open
+            mode = 'rt' if use_gzip else 'r'
+            with open_func(csv_file_path, mode, encoding='latin-1', newline='') as csv_file:
                 reader = csv.DictReader(csv_file)
                 if not reader.fieldnames:
                     print("Error: CSV file has no header row.")
