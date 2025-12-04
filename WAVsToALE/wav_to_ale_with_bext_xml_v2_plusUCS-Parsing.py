@@ -98,50 +98,78 @@ def load_ucs_mapping(csv_file_path):
     """
     ucs_mapping = {}
     try:
-        with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
-            reader = csv.DictReader(csv_file)
-            if not reader.fieldnames:
-                print("Error: CSV file has no header row.")
-                return {}
+        # Ensure the file exists
+        if not os.path.isfile(csv_file_path):
+            print(f"Error: UCS CSV file not found at {csv_file_path}")
+            return {}
+        
+        # Try UTF-8 first, fallback to latin-1 for Windows encoding issues
+        try:
+            with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
+                reader = csv.DictReader(csv_file)
+                if not reader.fieldnames:
+                    print("Error: CSV file has no header row.")
+                    return {}
+                
+                fieldnames = reader.fieldnames
+                rows = list(reader)
+        except (UnicodeDecodeError, UnicodeError):
+            print("Warning: UTF-8 decode failed, trying latin-1...")
+            with open(csv_file_path, 'r', encoding='latin-1') as csv_file:
+                reader = csv.DictReader(csv_file)
+                if not reader.fieldnames:
+                    print("Error: CSV file has no header row.")
+                    return {}
+                
+                fieldnames = reader.fieldnames
+                rows = list(reader)
 
-            # Build a case-insensitive map of header -> original header
-            headers = [h.strip() for h in reader.fieldnames]
-            lower_map = {h.lower(): h for h in headers}
+        # Build a case-insensitive map of header -> original header
+        headers = [h.strip() for h in fieldnames]
+        lower_map = {h.lower(): h for h in headers}
 
-            # Required keys (case-insensitive)
-            required = ['category', 'subcategory']
-            if not all(k in lower_map for k in required):
-                print(f"Error: CSV file is missing required columns (CatID, Category, Subcategory). Found headers: {headers}")
-                return {}
+        # Required keys (case-insensitive)
+        required = ['category', 'subcategory']
+        if not all(k in lower_map for k in required):
+            print(f"Error: CSV file is missing required columns. Found headers: {headers}")
+            return {}
 
-            # Use the actual header names when reading rows to preserve original casing
-            # Accept multiple ID header variants
-            catid_h = lower_map.get('catid') or lower_map.get('id') or lower_map.get('catshort')
-            category_h = lower_map['category']
-            subcategory_h = lower_map['subcategory']
-            # Optional text fields
-            expl_h = lower_map.get('explanations') or lower_map.get('description')
-            keywords_h = lower_map.get('synonyms - comma separated') or lower_map.get('keywords')
+        # Use the actual header names when reading rows to preserve original casing
+        # Accept multiple ID header variants
+        catid_h = lower_map.get('catid') or lower_map.get('id') or lower_map.get('catshort')
+        category_h = lower_map['category']
+        subcategory_h = lower_map['subcategory']
+        # Optional text fields
+        expl_h = lower_map.get('explanations') or lower_map.get('description')
+        keywords_h = lower_map.get('synonyms - comma separated') or lower_map.get('keywords')
 
-            for row in reader:
-                cat_id = (row.get(catid_h) or '').strip()
-                category = (row.get(category_h) or 'Unknown').strip()
-                subcategory = (row.get(subcategory_h) or 'Unknown').strip()
-                explanations = (row.get(expl_h) or '').strip() if expl_h else ''
-                keywords_raw = (row.get(keywords_h) or '').strip() if keywords_h else ''
-                keywords = [k.strip() for k in keywords_raw.split(',') if k.strip()]
-                if cat_id:
-                    key = cat_id.upper()
-                    full_name = f"{category} {subcategory}".strip()
-                    ucs_mapping[key] = {
-                        'category': category,
-                        'subcategory': subcategory,
-                        'full_name': full_name,
-                        'explanations': explanations,
-                        'keywords': keywords,
-                    }
+        for row in rows:
+            cat_id = (row.get(catid_h) or '').strip()
+            category = (row.get(category_h) or 'Unknown').strip()
+            subcategory = (row.get(subcategory_h) or 'Unknown').strip()
+            explanations = (row.get(expl_h) or '').strip() if expl_h else ''
+            keywords_raw = (row.get(keywords_h) or '').strip() if keywords_h else ''
+            keywords = [k.strip() for k in keywords_raw.split(',') if k.strip()]
+            if cat_id:
+                key = cat_id.upper()
+                full_name = f"{category} {subcategory}".strip()
+                ucs_mapping[key] = {
+                    'category': category,
+                    'subcategory': subcategory,
+                    'full_name': full_name,
+                    'explanations': explanations,
+                    'keywords': keywords,
+                }
+        
+        if ucs_mapping:
+            print(f"Loaded {len(ucs_mapping)} UCS entries from {csv_file_path}")
+        else:
+            print(f"Warning: No UCS entries loaded from {csv_file_path}")
+            
     except Exception as e:
         print(f"Error loading UCS mapping from CSV: {e}")
+        import traceback
+        traceback.print_exc()
     return ucs_mapping
 
 def extract_ucs_category(filename):
