@@ -25,7 +25,7 @@ exe = EXE(
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
+    upx=False,  # Disable UPX compression - was corrupting CSV file
     console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
@@ -39,7 +39,7 @@ coll = COLLECT(
     a.binaries,
     a.datas,
     strip=False,
-    upx=True,
+    upx=False,  # Disable UPX for all files
     upx_exclude=[],
     name='WAVsToALE',
 )
