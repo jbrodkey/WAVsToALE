@@ -1,10 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-from PyInstaller.utils.hooks import collect_data_files
-
-# Use Tree to bundle the entire data directory to avoid file corruption
-datas = []
-datas += Tree('./data', prefix='data')
+# Only bundle the gzipped CSV - plain CSV gets truncated by PyInstaller
+datas = [('data/UCS_v8.2.1_Full_List.csv.gz', 'data')]
 
 a = Analysis(
     ['wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py'],
