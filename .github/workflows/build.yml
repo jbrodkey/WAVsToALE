@@ -68,7 +68,7 @@ jobs:
         Remove-Item -Path "WAVsToALE" -Recurse -Force -ErrorAction SilentlyContinue
         mkdir WAVsToALE
         copy WAVsToALE.exe WAVsToALE\
-        copy "..\WAVsToALE README.rtf" WAVsToALE\ 2>nul || echo "README file not found, skipping..."
+        copy "..\docs\README_windows.md" WAVsToALE\README.md 2>nul || echo "README file not found, skipping..."
         powershell Compress-Archive -Path WAVsToALE -DestinationPath "WAVsToALE-Windows-v${{ steps.get_version.outputs.version }}.zip"
         dir
         

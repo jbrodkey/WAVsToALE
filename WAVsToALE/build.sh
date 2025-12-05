@@ -43,6 +43,11 @@ pyinstaller WAVsToALE.spec
 
 echo "Build complete! Check dist/ folder for WAVsToALE.app"
 
+# Include macOS README in the built app bundle output
+if [ -f "docs/README_mac.md" ]; then
+    cp docs/README_mac.md dist/README.md
+fi
+
 # Update built app Info.plist with version from Python source
 echo "Updating app Info.plist with version..."
 ./packaging/update_info_plist.sh || {

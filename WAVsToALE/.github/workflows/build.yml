@@ -29,10 +29,10 @@ jobs:
 
       - name: Include macOS README in onedir
         run: |
-          if [ -f "docs/README_mac.rtf" ]; then
-            cp docs/README_mac.rtf dist/WAVsToALE/README.rtf
+          if [ -f "docs/README_mac.md" ]; then
+            cp docs/README_mac.md dist/WAVsToALE/README.md
           else
-            echo "README_mac.rtf not found, skipping..."
+            echo "README_mac.md not found, skipping..."
           fi
 
       - name: Archive build
@@ -85,9 +85,9 @@ jobs:
           # The spec file creates dist/WAVsToALE/ folder with exe and data
           # Platform-specific README (Windows)
           $repoRoot = Split-Path -Parent (Get-Location)
-          $winReadme = Join-Path $repoRoot 'docs/README_windows.rtf'
+          $winReadme = Join-Path $repoRoot 'docs/README_windows.md'
           if (Test-Path $winReadme) {
-            Copy-Item $winReadme 'WAVsToALE/README.rtf' -ErrorAction SilentlyContinue
+            Copy-Item $winReadme 'WAVsToALE/README.md' -ErrorAction SilentlyContinue
           } else {
             Write-Host 'Windows README not found, skipping...'
           }

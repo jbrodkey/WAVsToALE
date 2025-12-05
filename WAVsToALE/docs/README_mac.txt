@@ -6,8 +6,7 @@ This guide explains how to build a standalone Mac app for WAVsToALE using PyInst
 **Requirements:**
 - macOS 12 or later (Apple Silicon or Intel)
 - Python 3.10+ (from https://www.python.org/downloads/)
-- Your script: wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
-- UCS CSV: UCS_v8.2.1_Full_List.csv (in the same folder as the script)
+- Your script: wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py (UCS data is embedded; no external CSV needed)
 
 **Steps:**
 1. Open Terminal and navigate to your script folder:
@@ -18,9 +17,9 @@ This guide explains how to build a standalone Mac app for WAVsToALE using PyInst
    ```sh
    python3 -m pip install --user pyinstaller
    ```
-3. Build the app:
+3. Build the app (UCS data is embedded; no CSV flag needed):
    ```sh
-   python3 -m PyInstaller --noconfirm --clean --windowed --hidden-import tkinter --name "WAVsToALE" --add-data "UCS_v8.2.1_Full_List.csv:." wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
+   python3 -m PyInstaller --noconfirm --clean --windowed --hidden-import tkinter --name "WAVsToALE" wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
    ```
 4. After building, your standalone app will be in:
    ```

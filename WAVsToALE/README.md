@@ -26,13 +26,15 @@ WAVsToALE/
 │
 ├── docs/                                      # Extra guides and platform notes
 │   ├── BUILD_GUIDE.md
-│   ├── README_mac.txt
-│   ├── README_windows.txt
+│   ├── README_mac.md                          # macOS user guide (bundled)
+│   ├── README_mac.txt                         # macOS build instructions
+│   ├── README_windows.md                      # Windows user guide (bundled)
+│   ├── README_windows.txt                     # Windows build instructions
 │   ├── README_windows_build.txt
-│   ├── WAVsToALE README.rtf                   # RTF styled version for parity
 │   └── version_info.txt
 │
 └── archive/                                   # Legacy experiments/tests kept for reference
+    ├── old_readmes/                           # Archived RTF format user guides
     └── (older prototypes, test scripts)
 ```
 

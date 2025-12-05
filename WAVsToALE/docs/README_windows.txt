@@ -6,8 +6,7 @@ This guide explains how to build a standalone Windows executable for WAVsToALE u
 **Requirements:**
 - Windows 10 or later
 - Python 3.10+ (from https://www.python.org/downloads/)
-- Your script: wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
-- UCS CSV: UCS_v8.2.1_Full_List.csv (in the same folder as the script)
+- Your script: wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py (UCS data is embedded; no external CSV needed)
 
 **Steps:**
 1. Open Command Prompt and navigate to your script folder:
@@ -18,9 +17,9 @@ This guide explains how to build a standalone Windows executable for WAVsToALE u
    ```cmd
    python -m pip install pyinstaller
    ```
-3. Build the app (note the semicolon in --add-data for Windows):
+3. Build the app (UCS data is embedded; no CSV flag needed):
    ```cmd
-   pyinstaller --noconfirm --clean --windowed --hidden-import tkinter --name "WAVsToALE" --add-data "UCS_v8.2.1_Full_List.csv;." wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
+   pyinstaller --noconfirm --clean --windowed --hidden-import tkinter --name "WAVsToALE" wav_to_ale_with_bext_xml_v2_plusUCS-Parsing.py
    ```
 4. After building, your standalone app will be in:
    ```

@@ -1,0 +1,161 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\froman\fcharset0 TimesNewRomanPS-ItalicMT;
+\f3\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\vieww12000\viewh15840\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf0 WAVsToALE \'96 Quick Start
+\fs32 \
+
+\f1\b0\fs24 \
+
+\f0\b\fs28 Opening WAVsToALE on a Mac (macOS) \
+
+\f1\b0\fs24 \
+On macOS, if you see a security warning: \
+
+\f2\i "WAVsToALE.app can't be opened because it is from an unidentified developer."
+\f1\i0  \
+OR 
+\f2\i "Apple could not verify..."
+\f1\i0 \
+\
+You'll need to:\
+\pard\pardeftab720\li720\fi-360\partightenfactor0
+\cf0 1.	Open 
+\f0\b System Settings
+\f1\b0  > 
+\f0\b Privacy & Security
+\f1\b0 \
+2.	Scroll down to 
+\f0\b Security
+\f1\b0 \
+3.	At the line for 
+\f0\b WAVsToALE
+\f1\b0  choose: 
+\f0\b Open Anyway
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f0\b\fs28 UCS Filename Support\
+
+\f1\b0\fs24 \
+WAVsToALE recognizes 
+\f0\b Universal Category System (UCS)
+\f1\b0  filenames and automatically fills ALE fields like 
+\f2\i Library
+\f1\i0 , 
+\f2\i Category
+\f1\i0 , 
+\f2\i SubCategory
+\f1\i0 , and 
+\f2\i Description
+\f1\i0 . If filenames aren't UCS, it uses embedded WAV metadata (if present) instead.\
+\
+
+\f0\b\fs28 WAVsToALE \'96 How to Use\
+
+\f1\b0\fs24 \
+
+\f0\b 1. Select Input\
+\pard\pardeftab720\li360\fi-180\partightenfactor0
+
+\f1\b0 \cf0 \'95	
+\f0\b Single WAV
+\f1\b0 : Click 
+\f0\b "File..."
+\f1\b0  and choose a single 
+\f3 .wav
+\f1  file\
+\'95	
+\f0\b Folder of WAVs
+\f1\b0 : Click 
+\f0\b "Folder..."
+\f1\b0  and choose a directory that contains WAV files. The app will also scan and process any subfolders and create one ALE per subfolder.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f0\b 2. Select Output Folder (optional)\
+\pard\pardeftab720\li360\fi-180\partightenfactor0
+
+\f1\b0 \cf0 \'95	Click 
+\f0\b "Browse..."
+\f1\b0  to choose where ALE files will be written\
+\'95	If you leave this blank the app will create an 
+\f0\b ALEs
+\f1\b0  folder next to your WAV directory and write ALEs there\
+\'95	If you choose an existing folder, the app will create a subfolder named after the WAV folder and place ALEs inside it\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f0\b 3. Set FPS (frames per second)\
+\pard\pardeftab720\li360\fi-180\partightenfactor0
+
+\f1\b0 \cf0 \'95	Default is 
+\f0\b 24
+\f1\b0 . Enter your desired frame rate if you need something different.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f0\b 4. Run Conversion\
+\pard\pardeftab720\li360\fi-180\partightenfactor0
+
+\f1\b0 \cf0 \'95	Click 
+\f0\b "Run"
+\f1\b0  \'96 The app processes WAV files, extracts metadata (WAV header, BEXT, embedded XML, LIST/INFO, and UCS filename mapping), and writes ALE(s)\
+\'95	A log pane displays progress and any skips/errors\
+\'95	If an ALE file already exists, the app will auto-rename (e.g., 
+\f3 MyALE.ale
+\f1  \uc0\u8594  
+\f3 MyALE_1.ale
+\f1 ) to avoid overwriting\
+\'95	If you need to stop the processing, click 
+\f0\b "Cancel"
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f0\b 5. Open Output\
+\pard\pardeftab720\li360\fi-180\partightenfactor0
+
+\f1\b0 \cf0 \'95	After a successful run, click 
+\f0\b "Open ALE Location"
+\f1\b0  to reveal the created ALE(s)\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f0\b 6. Logs & Skips\
+\pard\pardeftab720\li360\fi-180\partightenfactor0
+
+\f1\b0 \cf0 \'95	If files are skipped due to parse errors or unsupported sound file formats, a 
+\f3 .skip.log
+\f1  file is generated next to the ALE. Check it for details.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f0\b\fs28 FAQ\
+
+\f1\b0\fs24 \
+
+\f0\b Q: What is this even for?
+\f1\b0 \
+A: Media Composer doesn't natively import WAV file metadata. This tool allows you to create an ALE with parsed metadata from any number of WAV files, (along with interpreting UCS file names in order to fill in Category and Subcategory fields).\
+\
+
+\f0\b Q: Great, I have an ALE. Now what?!
+\f1\b0 \
+A: Suggested workflow is: import your ALE(s) to a Media Composer Bin and then Batch Import the respective WAV files in order to attach them to the imported metadata.\
+\
+
+\f0\b Q: Why does my ALE not have any metadata?
+\f1\b0 \
+A: If the WAV file doesn't have any embedded metadata AND it's not named using UCS naming conventions, there's no metadata to parse. And in that case, there\'92s no metadata to pass along to the ALE.\
+\
+
+\f0\b Q: How are metadata conflicts resolved?
+\f1\b0 \
+A: Precedence (low \uc0\u8594  high): WAV header \u8594  BEXT \u8594  Embedded XML  \u8594  UCS filename mapping. Later sources override earlier ones.\
+}

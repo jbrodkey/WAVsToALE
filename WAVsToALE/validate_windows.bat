@@ -2,7 +2,7 @@
 REM Automated validation script for WAVsToALE Windows build
 
 SET EXE_PATH=dist\WAVsToALE.exe
-SET README_PATH=dist\WAVsToALE\README.rtf
+SET README_PATH=dist\WAVsToALE\README.md
 
 REM 1. Check if executable exists
 IF NOT EXIST "%EXE_PATH%" (
@@ -13,9 +13,9 @@ echo Executable found: %EXE_PATH%
 
 REM 2. Check if README exists in distribution folder
 IF NOT EXIST "%README_PATH%" (
-    echo Warning: README.rtf not found in distribution folder.
+    echo Warning: README.md not found in distribution folder.
 ) ELSE (
-    echo README.rtf found in distribution folder.
+    echo README.md found in distribution folder.
 )
 
 REM 3. Attempt to launch the app (headless)
