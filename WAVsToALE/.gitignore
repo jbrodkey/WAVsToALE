@@ -16,6 +16,9 @@ base_library.zip
 # Compressed archives
 *.zip
 
+# Reference folders
+MXToAAF/
+
 # Python cache
 __pycache__/
 *.pyc
