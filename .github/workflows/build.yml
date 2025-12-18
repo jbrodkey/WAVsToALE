@@ -74,7 +74,7 @@ jobs:
     - name: Upload package
       uses: actions/upload-artifact@v4
       with:
-        name: WAVsToALE-Windows-v${{ steps.get_version.outputs.version }}
+        name: WAVsToALE-v${{ steps.get_version.outputs.version }}
         path: dist/WAVsToALE
         
     - name: Create Release
